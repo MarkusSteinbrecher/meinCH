@@ -1,0 +1,69 @@
+/* meinCH site layout. Only SteinerDesign role tokens — no raw colours, sizes or spacing. */
+
+body { background: var(--bg-page); }
+
+.icon { display: inline-block; flex: none; background: currentColor; mask: var(--icon-url) center / contain no-repeat; }
+
+.site-main { min-height: 70vh; }
+
+/* Nav: scrolls sideways on narrow screens instead of overflowing the page */
+.sd-nav { overflow-x: auto; }
+.sd-nav__links { flex: none; }
+
+/* Page head */
+.seite-kopf { display: grid; gap: var(--space-4); padding-block: var(--space-12) var(--space-8); border-bottom: var(--border-hairline) solid var(--border-subtle); }
+.seite-titel { font: var(--weight-bold) var(--text-3xl) / var(--leading-3xl) var(--font-sans); letter-spacing: var(--tracking-3xl); max-width: 24ch; text-wrap: balance; }
+.seite-lede { font: var(--weight-regular) var(--text-xl) / var(--leading-xl) var(--font-sans); letter-spacing: var(--tracking-xl); color: var(--fg-muted); max-width: 56ch; }
+
+/* Lesson body: prose + on-page index */
+.seite-rumpf { display: grid; grid-template-columns: minmax(0, 1fr) 220px; gap: var(--space-16); padding-block: var(--space-10) var(--space-16); }
+.seite-index { position: sticky; top: var(--space-6); align-self: start; }
+.seite-fuss { display: grid; gap: var(--space-8); max-width: var(--measure); }
+@media (max-width: 860px) { .seite-rumpf { grid-template-columns: minmax(0, 1fr); gap: var(--space-8); } .seite-index { display: none; } }
+.sd-prose > :first-child { margin-top: 0; }
+.sd-prose table { width: 100%; }
+
+/* Overview pages */
+.uebersicht { padding-block: var(--space-10) var(--space-16); display: grid; gap: var(--space-12); }
+.uebersicht h2 { font: var(--font-title); letter-spacing: var(--tracking-xl); margin-bottom: var(--space-3); }
+.tabelle-rahmen { overflow-x: auto; }
+td[data-num], th[data-num] { text-align: right; font-variant-numeric: tabular-nums; }
+
+/* Map next to facts (canton page), stacked on phones */
+.zweispaltig { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: var(--space-12); align-items: start; }
+@media (max-width: 860px) { .zweispaltig { grid-template-columns: minmax(0, 1fr); gap: var(--space-8); } }
+
+.fakten { margin: 0; display: grid; border-top: var(--border-hairline) solid var(--border-subtle); }
+.fakten > div { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: var(--space-4); padding-block: var(--space-3); border-bottom: var(--border-hairline) solid var(--border-subtle); }
+.fakten dt { font: var(--font-label); letter-spacing: var(--tracking-sm); color: var(--fg-muted); }
+.fakten dd { margin: 0; font: var(--font-body); letter-spacing: var(--tracking-md); }
+.fakten dd[data-ungeprueft]::after { content: " · ungeprüft"; font: var(--font-caption); color: var(--warn-fg); }
+
+.gemeindeliste { columns: 3 14ch; margin: 0; padding: 0; list-style: none; font: var(--font-body); letter-spacing: var(--tracking-md); }
+.gemeindeliste li { margin: 0 0 var(--space-1); break-inside: avoid; }
+
+/* Home */
+.start-kopf { display: grid; gap: var(--space-5); padding-block: var(--space-section) var(--space-12); border-bottom: var(--border-hairline) solid var(--border-subtle); }
+.start-titel { font: var(--weight-bold) var(--text-display) / var(--leading-display) var(--font-sans); letter-spacing: var(--tracking-display); max-width: 18ch; text-wrap: balance; }
+.bereiche { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-8); }
+.bereich { display: grid; gap: var(--space-2); align-content: start; padding-top: var(--space-4); border-top: var(--border-hairline) solid var(--fg-default); color: inherit; text-decoration: none; }
+.bereich:hover .bereich__titel { text-decoration: underline; }
+.bereich__titel { display: flex; align-items: center; gap: var(--space-2); font: var(--font-title); letter-spacing: var(--tracking-xl); }
+.bereich__text { font: var(--font-body); letter-spacing: var(--tracking-md); color: var(--fg-muted); }
+@media (max-width: 860px) { .bereiche { grid-template-columns: minmax(0, 1fr); } }
+
+/* Lesson list */
+.lektionen { list-style: none; margin: 0; padding: 0; border-top: var(--border-hairline) solid var(--border-subtle); }
+.lektionen li { margin: 0; border-bottom: var(--border-hairline) solid var(--border-subtle); }
+.lektionen a { display: grid; gap: var(--space-1); padding-block: var(--space-4); color: inherit; text-decoration: none; }
+.lektionen a:hover strong { text-decoration: underline; }
+.lektionen strong { font: var(--font-title); letter-spacing: var(--tracking-xl); }
+.lektionen span { font: var(--font-body); letter-spacing: var(--tracking-md); color: var(--fg-muted); }
+
+/* Page foot */
+.quellen .sd-sources { border: 0; padding: 0; margin: 0; }
+.kein-amt { display: flex; gap: var(--space-2); align-items: start; margin: 0; font: var(--font-caption); letter-spacing: var(--tracking-xs); color: var(--fg-muted); }
+.kein-amt .icon { margin-top: var(--space-half); }
+.kein-amt strong { color: var(--fg-default); font-weight: var(--weight-medium); }
+.site-fuss { border-top: var(--border-hairline) solid var(--border-subtle); padding-block: var(--space-8) var(--space-12); display: grid; gap: var(--space-2); font: var(--font-caption); letter-spacing: var(--tracking-xs); color: var(--fg-muted); }
+.site-fuss a { color: inherit; }

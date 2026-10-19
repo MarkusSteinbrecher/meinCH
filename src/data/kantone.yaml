@@ -1,0 +1,54 @@
+# Grunddaten der 26 Kantone. Reihenfolge und Nummer wie in der Bundesverfassung (Art. 1) und im BFS-Gemeindeverzeichnis.
+# Jede Angabe nennt ihre Quelle (Schlüssel in `quellen`). `ungeprueft: true` heisst: aus allgemeinem Wissen erfasst,
+# noch nicht gegen die Quelle geprüft. Die Website zeigt solche Angaben markiert an.
+geprueft_am: 2026-10-19
+
+quellen:
+  bv:
+    titel: Bundesverfassung der Schweizerischen Eidgenossenschaft (SR 101)
+    url: https://www.fedlex.admin.ch/eli/cc/1999/404/de
+    artikel: Art. 1
+  bfs_agv:
+    titel: BFS, Amtliches Gemeindeverzeichnis der Schweiz
+    url: https://www.agvchapp.bfs.admin.ch/de/state/query
+  hls:
+    titel: Historisches Lexikon der Schweiz (HLS), Artikel zu den Kantonen
+    url: https://hls-dhs-dss.ch/de/
+
+# nr: BFS-Kantonsnummer. beitritt: Jahr des Eintritts in die Eidgenossenschaft.
+# sprachen: Amtssprachen des Kantons (de, fr, it, rm).
+kantone:
+  - { nr: 1, code: ZH, name: Zürich, hauptort: Zürich, beitritt: 1351, sprachen: [de] }
+  - { nr: 2, code: BE, name: Bern, hauptort: Bern, beitritt: 1353, sprachen: [de, fr] }
+  - { nr: 3, code: LU, name: Luzern, hauptort: Luzern, beitritt: 1332, sprachen: [de] }
+  - { nr: 4, code: UR, name: Uri, hauptort: Altdorf, beitritt: 1291, sprachen: [de] }
+  - { nr: 5, code: SZ, name: Schwyz, hauptort: Schwyz, beitritt: 1291, sprachen: [de] }
+  - { nr: 6, code: OW, name: Obwalden, hauptort: Sarnen, beitritt: 1291, sprachen: [de] }
+  - { nr: 7, code: NW, name: Nidwalden, hauptort: Stans, beitritt: 1291, sprachen: [de] }
+  - { nr: 8, code: GL, name: Glarus, hauptort: Glarus, beitritt: 1352, sprachen: [de] }
+  - { nr: 9, code: ZG, name: Zug, hauptort: Zug, beitritt: 1352, sprachen: [de] }
+  - { nr: 10, code: FR, name: Freiburg, hauptort: Freiburg, beitritt: 1481, sprachen: [fr, de] }
+  - { nr: 11, code: SO, name: Solothurn, hauptort: Solothurn, beitritt: 1481, sprachen: [de] }
+  - { nr: 12, code: BS, name: Basel-Stadt, hauptort: Basel, beitritt: 1501, sprachen: [de] }
+  - { nr: 13, code: BL, name: Basel-Landschaft, hauptort: Liestal, beitritt: 1501, sprachen: [de] }
+  - { nr: 14, code: SH, name: Schaffhausen, hauptort: Schaffhausen, beitritt: 1501, sprachen: [de] }
+  - { nr: 15, code: AR, name: Appenzell Ausserrhoden, hauptort: Herisau, beitritt: 1513, sprachen: [de], hinweis: "Sitz von Regierung und Parlament ist Herisau, das Kantonsgericht tagt in Trogen." }
+  - { nr: 16, code: AI, name: Appenzell Innerrhoden, hauptort: Appenzell, beitritt: 1513, sprachen: [de] }
+  - { nr: 17, code: SG, name: St. Gallen, hauptort: St. Gallen, beitritt: 1803, sprachen: [de] }
+  - { nr: 18, code: GR, name: Graubünden, hauptort: Chur, beitritt: 1803, sprachen: [de, rm, it] }
+  - { nr: 19, code: AG, name: Aargau, hauptort: Aarau, beitritt: 1803, sprachen: [de] }
+  - { nr: 20, code: TG, name: Thurgau, hauptort: Frauenfeld, beitritt: 1803, sprachen: [de] }
+  - { nr: 21, code: TI, name: Tessin, hauptort: Bellinzona, beitritt: 1803, sprachen: [it] }
+  - { nr: 22, code: VD, name: Waadt, hauptort: Lausanne, beitritt: 1803, sprachen: [fr] }
+  - { nr: 23, code: VS, name: Wallis, hauptort: Sitten, beitritt: 1815, sprachen: [fr, de] }
+  - { nr: 24, code: NE, name: Neuenburg, hauptort: Neuenburg, beitritt: 1815, sprachen: [fr] }
+  - { nr: 25, code: GE, name: Genf, hauptort: Genf, beitritt: 1815, sprachen: [fr] }
+  - { nr: 26, code: JU, name: Jura, hauptort: Delsberg, beitritt: 1979, sprachen: [fr], hinweis: "Abspaltung vom Kanton Bern, 1979 als 26. Kanton gegründet." }
+
+# Welche Angabe woher stammt und ob sie geprüft ist.
+felder:
+  name: { quelle: bv }
+  nr: { quelle: bfs_agv }
+  hauptort: { quelle: hls, ungeprueft: true }
+  beitritt: { quelle: hls, ungeprueft: true }
+  sprachen: { quelle: hls, ungeprueft: true }

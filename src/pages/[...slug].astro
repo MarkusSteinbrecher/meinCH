@@ -1,0 +1,14 @@
+---
+import { getCollection, render } from 'astro:content';
+import Lektion from '../layouts/Lektion.astro';
+
+export async function getStaticPaths() {
+  const lektionen = await getCollection('lektionen');
+  return lektionen.map((l) => ({ params: { slug: l.id }, props: { lektion: l } }));
+}
+const { lektion } = Astro.props;
+const { Content, headings } = await render(lektion);
+const woerter = (lektion.body ?? '').replace(/^import .*$/gm, '').replace(/<[^>]*>/g, ' ').split(/\s+/).filter(Boolean).length;
+const lesezeit = Math.max(1, Math.round(woerter / 200));
+---
+<Lektion {...lektion.data} headings={headings} lesezeit={lesezeit}><Content /></Lektion>

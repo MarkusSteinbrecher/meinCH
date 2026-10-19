@@ -1,0 +1,44 @@
+---
+import Basis from '../../layouts/Basis.astro';
+import Karte from '../../components/Karte.svelte';
+import Quellen from '../../components/Quellen.astro';
+import { schweizKarte, KARTEN_QUELLE } from '../../lib/karte';
+import { KANTONE, KANTONSDATEN, SPRACHEN, gemeindenVon } from '../../lib/kantone';
+import { pfad } from '../../lib/site';
+
+const karte = schweizKarte();
+const flaechen = karte.flaechen.map((f) => {
+  const k = KANTONE[f.id - 1];
+  return { ...f, href: pfad(`kantone/${k.code.toLowerCase()}`), info: `Hauptort ${k.hauptort} · seit ${k.beitritt}` };
+});
+const ungeprueft = Object.values(KANTONSDATEN.felder).some((f) => f.ungeprueft);
+---
+<Basis titel="Kantone" beschreibung="Alle 26 Kantone auf der Karte: Hauptort, Beitritt, Amtssprachen und Gemeinden." bereich="kantone">
+  <header class="seite-kopf">
+    <ol class="sd-breadcrumb" aria-label="Pfad"><li><a href={pfad()}>Start</a></li><li><span aria-current="page">Kantone</span></li></ol>
+    <h1 class="seite-titel">Die 26 Kantone</h1>
+    <p class="seite-lede">Die Schweiz ist ein Bundesstaat aus 26 Kantonen. Wähle einen Kanton auf der Karte oder übe, wo welcher Kanton liegt.</p>
+    {ungeprueft && <div class="sd-meta"><span class="sd-badge" data-tone="warn">Hauptorte, Beitrittsjahre und Sprachen noch ungeprüft</span></div>}
+  </header>
+  <div class="uebersicht">
+    <Karte client:visible {...karte} flaechen={flaechen} titel="Die 26 Kantone" ueben />
+    <div class="tabelle-rahmen">
+      <table>
+        <thead><tr><th data-num>Nr.</th><th>Kanton</th><th>Hauptort</th><th data-num>Beitritt</th><th>Amtssprachen</th><th data-num>Gemeinden</th></tr></thead>
+        <tbody>
+          {KANTONE.map((k) => (
+            <tr>
+              <td data-num>{k.nr}</td>
+              <td><a href={pfad(`kantone/${k.code.toLowerCase()}`)}>{k.name}</a> ({k.code})</td>
+              <td>{k.hauptort}</td>
+              <td data-num>{k.beitritt}</td>
+              <td>{k.sprachen.map((s) => SPRACHEN[s]).join(', ')}</td>
+              <td data-num>{gemeindenVon(k.code).length}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <Quellen quellen={[...Object.values(KANTONSDATEN.quellen), KARTEN_QUELLE]} />
+  </div>
+</Basis>

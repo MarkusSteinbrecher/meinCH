@@ -1,0 +1,29 @@
+---
+import { getCollection } from 'astro:content';
+import Basis from '../../layouts/Basis.astro';
+import { THEMEN, pfad, type Thema } from '../../lib/site';
+
+export function getStaticPaths() {
+  return Object.keys(THEMEN).map((thema) => ({ params: { thema } }));
+}
+const thema = Astro.params.thema as Thema;
+const lektionen = (await getCollection('lektionen', (l) => l.data.thema === thema)).sort((a, b) => a.data.reihenfolge - b.data.reihenfolge);
+const einleitung: Record<Thema, string> = {
+  politik: 'Bund, Kantone und Gemeinden, direkte Demokratie und die Behörden: wie die Schweiz regiert wird.',
+  einbuergerung: 'Voraussetzungen, Ablauf und Grundkenntnistest, zuerst für den Kanton Zürich.',
+};
+---
+<Basis titel={THEMEN[thema]} beschreibung={einleitung[thema]} bereich={thema}>
+  <header class="seite-kopf">
+    <ol class="sd-breadcrumb" aria-label="Pfad"><li><a href={pfad()}>Start</a></li><li><span aria-current="page">{THEMEN[thema]}</span></li></ol>
+    <h1 class="seite-titel">{THEMEN[thema]}</h1>
+    <p class="seite-lede">{einleitung[thema]}</p>
+  </header>
+  <div class="uebersicht">
+    <ul class="lektionen">
+      {lektionen.map((l) => (
+        <li><a href={pfad(l.id)}><strong>{l.data.titel}</strong><span>{l.data.beschreibung}</span></a></li>
+      ))}
+    </ul>
+  </div>
+</Basis>

@@ -1,0 +1,40 @@
+---
+import '../styles/site.css';
+import { ENTWURFSPHASE, NAVIGATION, pfad, datei } from '../lib/site';
+
+interface Props { titel: string; beschreibung: string; bereich?: string }
+const { titel, beschreibung, bereich } = Astro.props;
+const seitentitel = titel === 'meinCH' ? 'meinCH – Schweiz verstehen' : `${titel} – meinCH`;
+---
+<!doctype html>
+<html lang="de-CH">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{seitentitel}</title>
+    <meta name="description" content={beschreibung} />
+    {ENTWURFSPHASE && <meta name="robots" content="noindex, nofollow" />}
+    <link rel="icon" type="image/svg+xml" href={datei('favicon.svg')} />
+    <link rel="stylesheet" href={datei('vendor/steinerdesign/dist/steiner.css')} />
+  </head>
+  <body>
+    <nav class="sd-nav" aria-label="Hauptnavigation">
+      <a class="sd-nav__brand" href={pfad()}>meinCH</a>
+      <ul class="sd-nav__links" role="list">
+        {NAVIGATION.map((n) => (
+          <li style="display:flex"><a class="sd-nav__link" href={pfad(n.href)} aria-current={n.bereich === bereich ? 'page' : undefined}>{n.label}</a></li>
+        ))}
+      </ul>
+      {ENTWURFSPHASE && <div class="sd-nav__end"><span class="sd-badge" data-tone="warn">in Arbeit</span></div>}
+    </nav>
+    <main class="site-main sd-container" style="--container:1120px">
+      <slot />
+    </main>
+    <footer class="sd-container" style="--container:1120px">
+      <div class="site-fuss">
+        <span>meinCH erklärt die Schweiz: Kantone, Gemeinden, politisches System und Einbürgerung. Privates Lernangebot, kein offizielles Angebot von Bund, Kantonen oder Gemeinden.</span>
+        <span>Karten: © swisstopo, BFS · Quelltext und Daten: <a href="https://github.com/MarkusSteinbrecher/meinCH">github.com/MarkusSteinbrecher/meinCH</a> · Fehler gefunden? Bitte als Issue melden.</span>
+      </div>
+    </footer>
+  </body>
+</html>

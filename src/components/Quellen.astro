@@ -1,0 +1,17 @@
+---
+/** Sources stay on every page (ADR 0002) but folded away: one line until someone wants them. */
+interface Props { quellen: { titel: string; url: string; artikel?: string }[] }
+const { quellen } = Astro.props;
+---
+<details class="sd-disclosure quellen">
+  <summary>Quellen ({quellen.length})</summary>
+  <div class="sd-disclosure__body">
+    <section class="sd-sources" aria-label="Quellen">
+      <ol>
+        {quellen.map((q, i) => (
+          <li id={`q${i + 1}`}><a href={q.url} rel="noopener">{q.titel}</a>{q.artikel && <span>, {q.artikel}</span>}</li>
+        ))}
+      </ol>
+    </section>
+  </div>
+</details>
