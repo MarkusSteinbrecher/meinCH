@@ -1,6 +1,6 @@
 ---
 titel: Bund, Kantone, Gemeinden
-beschreibung: Die drei Staatsebenen der Schweiz, wer wofür zuständig ist und wie die Gewalten auf jeder Ebene verteilt sind.
+beschreibung: Die drei Staatsebenen der Schweiz, wer wofür zuständig ist und wie die Gewalten verteilt sind.
 thema: politik
 reihenfolge: 10
 geprueft_am: 2026-10-19
@@ -8,6 +8,9 @@ quellen:
   - titel: Bundesverfassung der Schweizerischen Eidgenossenschaft (SR 101)
     url: https://www.fedlex.admin.ch/eli/cc/1999/404/de
     artikel: Art. 1, 3, 42, 50, 148, 174, 188
+  - titel: Bundesgesetz über das Bundesgericht (BGG, SR 173.110)
+    url: https://www.fedlex.admin.ch/eli/cc/2006/218/de
+    artikel: Art. 4
   - titel: BFS, Amtliches Gemeindeverzeichnis der Schweiz
     url: https://www.agvchapp.bfs.admin.ch/de/state/query
 ---
@@ -19,7 +22,7 @@ import { GEMEINDEN } from '../../../lib/kantone';
   { wert: '1', label: 'Bund' },
   { wert: '26', label: 'Kantone' },
   { wert: String(GEMEINDEN.length), label: 'Gemeinden', hinweis: 'Stand 1. Januar 2026' },
-  { wert: '3', label: 'Gewalten', hinweis: 'auf jeder Ebene' },
+  { wert: '3', label: 'Gewalten', hinweis: 'Gesetzgebung, Regierung, Gerichte' },
 ]} />
 
 Die Schweiz ist ein **Bundesstaat**. Die Kantone haben sich zum Bund zusammengeschlossen und ihm einen Teil ihrer Aufgaben übertragen. Die Gemeinden sind Teil ihres Kantons.
@@ -34,10 +37,10 @@ Die Schweiz ist ein **Bundesstaat**. Die Kantone haben sich zum Bund zusammenges
 
 ## Gewaltenteilung
 
-Auf jeder Ebene sind die Aufgaben auf drei Gewalten verteilt, damit niemand zu viel Macht hat:
+Beim Bund und in den Kantonen sind die Aufgaben auf drei Gewalten verteilt, damit niemand zu viel Macht hat. Gemeinden haben ein Parlament oder eine Versammlung und eine Regierung, aber keine eigenen Gerichte.
 
-- **Gesetzgebung (Legislative):** erlässt Gesetze und bewilligt das Budget. Beim Bund ist das die Bundesversammlung, die «oberste Gewalt im Bund» (Art. 148 BV).
+- **Gesetzgebung (Legislative):** erlässt Gesetze und bewilligt das Budget. Beim Bund ist das die Bundesversammlung. Sie übt «unter Vorbehalt der Rechte von Volk und Ständen die oberste Gewalt im Bund» aus (Art. 148 BV).
 - **Regierung (Exekutive):** führt die Gesetze aus. Beim Bund der Bundesrat (Art. 174 BV).
-- **Rechtsprechung (Judikative):** entscheidet Streitfälle. Oberstes Gericht ist das Bundesgericht in Lausanne (Art. 188 BV).
+- **Rechtsprechung (Judikative):** entscheidet Streitfälle. Oberstes Gericht ist das Bundesgericht (Art. 188 BV). Es hat seinen Sitz in Lausanne, zwei Abteilungen arbeiten in Luzern (Art. 4 BGG).
 
 Weiter: [Parlament](../parlament/), [Bundesrat](../bundesrat/), [Direkte Demokratie](../direkte-demokratie/).

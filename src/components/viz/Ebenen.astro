@@ -8,7 +8,7 @@ import { GEMEINDEN } from '../../lib/kantone';
 const ebenen = [
   {
     name: 'Bund', anzahl: '1', zustaendig: 'Aussenpolitik, Armee, Zoll, Nationalstrassen, AHV',
-    gewalten: ['Bundesversammlung: Nationalrat und Ständerat', 'Bundesrat (7)', 'Bundesgericht'],
+    gewalten: ['Bundesversammlung: Nationalrat und Ständerat', 'Bundesrat (7)', 'Bundesgericht und weitere Bundesgerichte'],
   },
   {
     name: 'Kantone', anzahl: '26', zustaendig: 'Schulen, Spitäler, Polizei, Kantonsstrassen',
@@ -16,7 +16,7 @@ const ebenen = [
   },
   {
     name: 'Gemeinden', anzahl: String(GEMEINDEN.length), zustaendig: 'Volksschule, Wasser, Abfall, Ortsplanung',
-    gewalten: ['Gemeindeversammlung oder Gemeindeparlament', 'Gemeinderat bzw. Stadtrat', 'Friedensrichter (je nach Kanton)'],
+    gewalten: ['Gemeindeversammlung oder Gemeindeparlament', 'Gemeinderat bzw. Stadtrat', 'Keine eigenen Gerichte. Friedensrichter werden je nach Kanton in der Gemeinde gewählt.'],
   },
 ];
 ---
@@ -36,5 +36,5 @@ const ebenen = [
       ))}
     </div>
   ))}
-  <figcaption>Die drei Staatsebenen und die drei Gewalten. Jede Ebene erhebt eigene Steuern und hat eigene Behörden.</figcaption>
+  <figcaption>Die drei Staatsebenen und die drei Gewalten. Jede Ebene erhebt eigene Steuern. Gerichte gibt es nur beim Bund und in den Kantonen.</figcaption>
 </figure>

@@ -10,7 +10,7 @@ const max = Math.max(...parteien.map((p) => p.sitze));
 const titel = rat === 'nationalrat' ? 'Nationalrat' : 'Ständerat';
 ---
 <figure class="balken">
-  <figcaption class="balken__titel">{titel}: {total} Sitze nach Partei, Wahlen 2023{POLITIK.parteien.ungeprueft && ' (ungeprüft)'}</figcaption>
+  <figcaption class="balken__titel">{titel}: {total} Sitze nach Partei, Ergebnis der Wahlen 2023{POLITIK.parteien.ungeprueft && ' (ungeprüft)'}</figcaption>
   <ol class="balken__liste">
     {parteien.map((p) => (
       <li title={`${p.partei}: ${p.sitze} von ${total} Sitzen`}>

@@ -1,5 +1,5 @@
 # Zahlen zum politischen System des Bundes. Jede Zahl nennt ihre Quelle (Schlüssel in `quellen`).
-# `ungeprueft: true`: aus allgemeinem Wissen erfasst, noch nicht gegen die Quelle geprüft.
+# `ungeprueft: true`: noch nicht gegen die Quelle geprüft. Alle Angaben geprüft am 19.10.2026.
 geprueft_am: 2026-10-19
 
 quellen:
@@ -9,23 +9,25 @@ quellen:
   bfs_nrw:
     titel: BFS, Nationalratswahlen 2023
     url: https://www.bfs.admin.ch/bfs/de/home/statistiken/politik/wahlen/eidgenoessische-wahlen/2023.html
+  sitze:
+    titel: ch.ch, Wahlen 2023, Anzahl Sitze im Parlament
+    url: https://www.ch.ch/de/wahlen2023/parlament/anzahl-sitze-im-parlament
   parlament:
-    titel: Die Bundesversammlung
-    url: https://www.parlament.ch/de
+    titel: Die Bundesversammlung, Mitglieder des Ständerats
+    url: https://www.parlament.ch/de/organe/staenderat/mitglieder-staenderat-a-z
   bundesrat:
     titel: Der Bundesrat, Mitglieder und Departemente
     url: https://www.admin.ch/gov/de/start/bundesrat/mitglieder-des-bundesrates.html
 
 # Sitze im Nationalrat pro Kanton, Legislatur 2023–2027 (Verteilung nach Bevölkerung, Art. 149 BV).
 nationalrat_sitze:
-  quelle: bfs_nrw
-  ungeprueft: true
+  quelle: sitze
   sitze: { ZH: 36, BE: 24, LU: 9, UR: 1, SZ: 4, OW: 1, NW: 1, GL: 1, ZG: 3, FR: 7, SO: 6, BS: 4, BL: 7, SH: 2, AR: 1, AI: 1, SG: 12, GR: 5, AG: 16, TG: 6, TI: 8, VD: 19, VS: 8, NE: 4, GE: 12, JU: 2 }
 
-# Sitze nach Partei nach den Wahlen vom 22. Oktober 2023.
+# Sitze nach Partei nach den Wahlen vom 22. Oktober 2023 (Ständerat inkl. zweite Wahlgänge).
+# Seither ändern Ersatzwahlen und Parteiwechsel die Zusammensetzung (z. B. Ständerat SH 2025: FDP statt SP).
 parteien:
   quelle: bfs_nrw
-  ungeprueft: true
   nationalrat:
     - { partei: SVP, sitze: 62 }
     - { partei: SP, sitze: 41 }
@@ -46,16 +48,15 @@ parteien:
     - { partei: GLP, sitze: 1 }
     - { partei: MCG, sitze: 1 }
 
-# Die sieben Departemente und der Bundesrat, Stand 1. Januar 2026.
+# Die sieben Departemente und der Bundesrat, Stand 1. Januar 2026, unverändert am 19. Oktober 2026.
 bundesrat:
   quelle: bundesrat
-  ungeprueft: true
   praesidium: { jahr: 2026, name: Guy Parmelin }
   departemente:
     - { kuerzel: EDA, name: Eidgenössisches Departement für auswärtige Angelegenheiten, kurz: Aussenpolitik, vorsteher: Ignazio Cassis, partei: FDP, icon: globe }
     - { kuerzel: EDI, name: Eidgenössisches Departement des Innern, kurz: "Gesundheit, AHV, Kultur", vorsteher: Elisabeth Baume-Schneider, partei: SP, icon: heart }
     - { kuerzel: EJPD, name: Eidgenössisches Justiz- und Polizeidepartement, kurz: "Justiz, Polizei, Migration", vorsteher: Beat Jans, partei: SP, icon: scale }
-    - { kuerzel: VBS, name: "Eidgenössisches Departement für Verteidigung, Bevölkerungsschutz und Sport", kurz: "Armee, Zivilschutz, Sport", vorsteher: Martin Pfister, partei: Mitte, icon: users }
+    - { kuerzel: VBS, name: "Eidgenössisches Departement für Verteidigung, Bevölkerungsschutz und Sport", kurz: "Armee, Bevölkerungsschutz, Sport", vorsteher: Martin Pfister, partei: Mitte, icon: users }
     - { kuerzel: EFD, name: Eidgenössisches Finanzdepartement, kurz: "Finanzen, Steuern, Zoll", vorsteher: Karin Keller-Sutter, partei: FDP, icon: wallet }
     - { kuerzel: WBF, name: "Eidgenössisches Departement für Wirtschaft, Bildung und Forschung", kurz: "Wirtschaft, Bildung, Landwirtschaft", vorsteher: Guy Parmelin, partei: SVP, icon: briefcase }
     - { kuerzel: UVEK, name: "Eidgenössisches Departement für Umwelt, Verkehr, Energie und Kommunikation", kurz: "Verkehr, Energie, Umwelt", vorsteher: Albert Rösti, partei: SVP, icon: plane }

@@ -5,10 +5,10 @@ thema: politik
 kanton: ZH
 reihenfolge: 50
 geprueft_am: 2026-10-19
-entwurf: true
 quellen:
   - titel: Verfassung des Kantons Zürich vom 27. Februar 2005 (LS 101)
-    url: https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung.html
+    url: http://www.zhlex.zh.ch/Erlass.html?Open&Ordnr=101
+    artikel: Art. 24, 32, 33, 41, 50, 51, 61, 62, 75, 80, 87
   - titel: Kantonsrat Zürich
     url: https://www.kantonsrat.zh.ch/
   - titel: Gemeinderat der Stadt Zürich
@@ -26,19 +26,23 @@ import { gemeindenVon } from '../../../lib/kantone';
   { wert: String(gemeindenVon('ZH').length), label: 'Gemeinden', hinweis: 'Stand 1. Januar 2026' },
 ]} />
 
-Der Kanton Zürich hat wie jeder Kanton eine eigene Verfassung. Die heutige **Kantonsverfassung** stammt vom 27. Februar 2005.
+Der Kanton Zürich hat wie jeder Kanton eine eigene Verfassung. Die heutige **Kantonsverfassung** stammt vom 27. Februar 2005 und gilt seit dem 1. Januar 2006.
 
 ## Die Behörden des Kantons
 
 | Gewalt | Behörde | Wahl |
 |---|---|---|
 | Gesetzgebung | **Kantonsrat**, 180 Mitglieder | vom Volk, alle 4 Jahre, nach Proporz |
-| Regierung | **Regierungsrat**, 7 Mitglieder | vom Volk, alle 4 Jahre |
-| Rechtsprechung | **Obergericht**, Bezirksgerichte und weitere Gerichte | Oberrichter vom Kantonsrat |
+| Regierung | **Regierungsrat**, 7 Mitglieder | vom Volk, alle 4 Jahre, nach Majorz |
+| Rechtsprechung | **Obergericht**, Bezirksgerichte und weitere Gerichte | kantonale Gerichte vom Kantonsrat, Bezirksgerichte von den Stimmberechtigten im Bezirk |
 
 Anders als beim Bund wählt im Kanton das **Volk die Regierung** direkt.
 
-Das Volk kann auch im Kanton Initiativen einreichen und das Referendum gegen Gesetze ergreifen. Änderungen der Kantonsverfassung kommen automatisch zur Abstimmung.
+Auch im Kanton hat das Volk direkte Mitsprache:
+
+- **Volksinitiative:** 6000 Unterschriften (Art. 24 KV).
+- **Fakultatives Referendum:** 3000 Stimmberechtigte, 12 Gemeinden, die Stadt Zürich, die Stadt Winterthur oder 45 Mitglieder des Kantonsrates (Art. 33 KV).
+- **Obligatorisches Referendum:** Änderungen der Kantonsverfassung kommen automatisch zur Abstimmung (Art. 32 KV).
 
 ## Im Bund
 
@@ -46,7 +50,9 @@ Der Kanton Zürich wählt **36 Mitglieder** in den Nationalrat, mehr als jeder a
 
 ## Bezirke und Gemeinden
 
-Der Kanton ist in **12 Bezirke** eingeteilt. Die Bezirke sind Verwaltungs- und Gerichtskreise, sie haben kein eigenes Parlament. Die politischen Entscheide fallen in den Gemeinden: In den meisten Gemeinden ist das die **Gemeindeversammlung**, in grösseren Gemeinden und Städten ein gewähltes **Gemeindeparlament**.
+Der Kanton ist in **12 Bezirke** eingeteilt: Affoltern, Andelfingen, Bülach, Dielsdorf, Dietikon, Hinwil, Horgen, Meilen, Pfäffikon, Uster, Winterthur und Zürich. Die Bezirke sind Verwaltungs- und Gerichtskreise, nach ihnen richten sich auch die Wahlkreise für den Kantonsrat (Art. 51 KV). Ein eigenes Parlament haben sie nicht, die Stimmberechtigten im Bezirk wählen aber den Statthalter, den Bezirksrat und das Bezirksgericht.
+
+Die politischen Entscheide fallen in den Gemeinden: In den meisten Gemeinden ist das die **Gemeindeversammlung**. Nur einige grössere Gemeinden und Städte haben ein gewähltes **Gemeindeparlament** (Art. 87 KV).
 
 ## Die Stadt Zürich
 
@@ -55,4 +61,4 @@ Der Kanton ist in **12 Bezirke** eingeteilt. Die Bezirke sind Verwaltungs- und G
 | **Gemeinderat** (Parlament) | 125 |
 | **Stadtrat** (Regierung), geleitet vom Stadtpräsidium | 9 |
 
-In der Stadt Zürich heisst das Parlament «Gemeinderat» und die Regierung «Stadtrat». In kleineren Gemeinden heisst die Regierung «Gemeinderat». Das ist eine typische Prüfungsfrage.
+In der Stadt Zürich heisst das Parlament «Gemeinderat» und die Regierung «Stadtrat». In den meisten anderen Gemeinden heisst dagegen die Regierung «Gemeinderat».

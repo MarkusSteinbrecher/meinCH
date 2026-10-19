@@ -1,6 +1,6 @@
 # Grunddaten der 26 Kantone. Reihenfolge und Nummer wie in der Bundesverfassung (Art. 1) und im BFS-Gemeindeverzeichnis.
-# Jede Angabe nennt ihre Quelle (Schlüssel in `quellen`). `ungeprueft: true` heisst: aus allgemeinem Wissen erfasst,
-# noch nicht gegen die Quelle geprüft. Die Website zeigt solche Angaben markiert an.
+# Jede Angabe nennt ihre Quelle (Schlüssel in `quellen`). `ungeprueft: true` heisst: noch nicht gegen die Quelle geprüft;
+# die Website zeigt solche Angaben markiert an. Alle Felder geprüft am 19.10.2026 (BV Art. 1, HLS, Kanton AR).
 geprueft_am: 2026-10-19
 
 quellen:
@@ -14,6 +14,9 @@ quellen:
   hls:
     titel: Historisches Lexikon der Schweiz (HLS), Artikel zu den Kantonen
     url: https://hls-dhs-dss.ch/de/
+  ar_hauptort:
+    titel: Kanton Appenzell Ausserrhoden, Themenblatt «Hauptort des Kantons» (2019)
+    url: https://www.ar.ch/fileadmin/user_upload/Regierungsrat/Kantonsverfassung/Themenblaetter/Arbeitsgruppe_1/Themenblatt_112_Hauptort_des_Kantons_Weiterverwendung_nach_Plenum_25042019.pdf
 
 # nr: BFS-Kantonsnummer. beitritt: Jahr des Eintritts in die Eidgenossenschaft.
 # sprachen: Amtssprachen des Kantons (de, fr, it, rm).
@@ -32,7 +35,7 @@ kantone:
   - { nr: 12, code: BS, name: Basel-Stadt, hauptort: Basel, beitritt: 1501, sprachen: [de] }
   - { nr: 13, code: BL, name: Basel-Landschaft, hauptort: Liestal, beitritt: 1501, sprachen: [de] }
   - { nr: 14, code: SH, name: Schaffhausen, hauptort: Schaffhausen, beitritt: 1501, sprachen: [de] }
-  - { nr: 15, code: AR, name: Appenzell Ausserrhoden, hauptort: Herisau, beitritt: 1513, sprachen: [de], hinweis: "Sitz von Regierung und Parlament ist Herisau, das Kantonsgericht tagt in Trogen." }
+  - { nr: 15, code: AR, name: Appenzell Ausserrhoden, hauptort: Herisau, beitritt: 1513, sprachen: [de], hinweis: "Die Kantonsverfassung nennt keinen Hauptort. Regierung, Parlament und Verwaltung sind in Herisau, die Gerichte in Trogen." }
   - { nr: 16, code: AI, name: Appenzell Innerrhoden, hauptort: Appenzell, beitritt: 1513, sprachen: [de] }
   - { nr: 17, code: SG, name: St. Gallen, hauptort: St. Gallen, beitritt: 1803, sprachen: [de] }
   - { nr: 18, code: GR, name: Graubünden, hauptort: Chur, beitritt: 1803, sprachen: [de, rm, it] }
@@ -43,12 +46,12 @@ kantone:
   - { nr: 23, code: VS, name: Wallis, hauptort: Sitten, beitritt: 1815, sprachen: [fr, de] }
   - { nr: 24, code: NE, name: Neuenburg, hauptort: Neuenburg, beitritt: 1815, sprachen: [fr] }
   - { nr: 25, code: GE, name: Genf, hauptort: Genf, beitritt: 1815, sprachen: [fr] }
-  - { nr: 26, code: JU, name: Jura, hauptort: Delsberg, beitritt: 1979, sprachen: [fr], hinweis: "Abspaltung vom Kanton Bern, 1979 als 26. Kanton gegründet." }
+  - { nr: 26, code: JU, name: Jura, hauptort: Delsberg, beitritt: 1979, sprachen: [fr], hinweis: "Hat sich vom Kanton Bern getrennt. Volk und Stände stimmten am 24. September 1978 zu, seit dem 1. Januar 1979 ist der Jura der 26. Kanton." }
 
 # Welche Angabe woher stammt und ob sie geprüft ist.
 felder:
   name: { quelle: bv }
   nr: { quelle: bfs_agv }
-  hauptort: { quelle: hls, ungeprueft: true }
-  beitritt: { quelle: hls, ungeprueft: true }
-  sprachen: { quelle: hls, ungeprueft: true }
+  hauptort: { quelle: hls }
+  beitritt: { quelle: hls }
+  sprachen: { quelle: hls }

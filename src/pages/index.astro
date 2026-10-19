@@ -12,7 +12,7 @@ const flaechen = karte.flaechen.map((f) => {
   return { ...f, href: pfad(`kantone/${k.code.toLowerCase()}`), info: `Hauptort ${k.hauptort} · seit ${k.beitritt}` };
 });
 const bereiche = [
-  { href: 'kantone', icon: 'map-pin', titel: 'Kantone', text: `Alle 26 Kantone und ${GEMEINDEN.length} Gemeinden auf der Karte, mit Hauptort, Sprachen und Geschichte.` },
+  { href: 'kantone', icon: 'map-pin', titel: 'Kantone', text: `Alle 26 Kantone und ${GEMEINDEN.length} Gemeinden auf der Karte, mit Hauptort, Amtssprachen und Beitrittsjahr.` },
   { href: 'politik', icon: 'landmark', titel: 'Politisches System', text: 'Bund, Kantone und Gemeinden, direkte Demokratie, Parlament und Bundesrat.' },
   { href: 'einbuergerung', icon: 'book-open', titel: 'Einbürgerung', text: 'Voraussetzungen, Ablauf und Grundkenntnistest, zuerst für den Kanton Zürich.' },
 ];
