@@ -1,6 +1,6 @@
-# meinCH – Schweiz verstehen
+# meinCH
 
-Die Schweiz verstehen, nicht nur den Einbürgerungstest bestehen: alle 26 Kantone, interaktive Karten, das politische System, Geschichte, Geografie und Gesellschaft. Neutral, werbefrei, jede Aussage mit Quelle und Stand-Datum.
+Lern-Website über die Schweiz: die 26 Kantone und ihre Gemeinden auf interaktiven Karten, das politische System, Geschichte, Geografie, Gesellschaft und die Einbürgerung. Jede Aussage mit Quelle und Prüfdatum.
 
 **Status:** Entwurf, noch nicht für die Öffentlichkeit freigegeben (Suchmaschinen sind ausgeschlossen). Danach folgt eine iOS-App in einem eigenen Repository.
 **Website:** https://stein-clankers.github.io/meinCH/

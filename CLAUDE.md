@@ -1,10 +1,11 @@
 # meinCH
 
-Öffentliche Lern-Website über die Schweiz und zur Vorbereitung auf die Einbürgerung: alle 26 Kantone, interaktive Karten, politisches System, Geschichte, Geografie, Gesellschaft. Primär Markus' eigene Informationsquelle und Testvorbereitung, öffentlich als freies, neutrales Angebot. Positionierung: «die Schweiz verstehen, nicht nur den Test bestehen» (siehe `reports/`).
+Öffentliche Lern-Website über die Schweiz und zur Vorbereitung auf die Einbürgerung: alle 26 Kantone, interaktive Karten, politisches System, Geschichte, Geografie, Gesellschaft. Primär Markus' eigene Informationsquelle und Testvorbereitung.
 
 ## Conventions
 
 - **Sprache:** Deutsch, Schweizer Rechtschreibung («ss» statt «ß», Guillemets «»). Leser werden mit «du» angesprochen.
+- **Ton:** nur Inhalt, kein Marketing. Keine Slogans, Werbeversprechen oder Selbstbeschreibungen («neutral, werbefrei …»); Seiten sagen, was drin steht (Markus, 2026-10-19).
 - **Design:** SteinerDesign (`~/Code/design-system/`), vendored from a release tag.
 - **Mobile matters:** people learn on the phone; every view must work well at 390 px, unlike desktop-first meineSteuer.
 - **Content is shared with the iOS app** (separate repo, later): facts, lessons, questions and map data live in versioned data files, not in page markup, so the app can consume them.

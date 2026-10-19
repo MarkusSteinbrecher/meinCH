@@ -440,37 +440,37 @@
   {
    "bfs": 131,
    "name": "Adliswil",
-   "kanton": "VS"
+   "kanton": "ZH"
   },
   {
    "bfs": 135,
    "name": "Kilchberg (ZH)",
-   "kanton": "VS"
+   "kanton": "ZH"
   },
   {
    "bfs": 136,
    "name": "Langnau am Albis",
-   "kanton": "VS"
+   "kanton": "ZH"
   },
   {
    "bfs": 137,
    "name": "Oberrieden",
-   "kanton": "VS"
+   "kanton": "ZH"
   },
   {
    "bfs": 138,
    "name": "Richterswil",
-   "kanton": "VS"
+   "kanton": "ZH"
   },
   {
    "bfs": 139,
    "name": "Rüschlikon",
-   "kanton": "VS"
+   "kanton": "ZH"
   },
   {
    "bfs": 141,
    "name": "Thalwil",
-   "kanton": "VS"
+   "kanton": "ZH"
   },
   {
    "bfs": 151,
@@ -775,7 +775,7 @@
   {
    "bfs": 293,
    "name": "Wädenswil",
-   "kanton": "VS"
+   "kanton": "ZH"
   },
   {
    "bfs": 294,
@@ -785,7 +785,7 @@
   {
    "bfs": 295,
    "name": "Horgen",
-   "kanton": "VS"
+   "kanton": "ZH"
   },
   {
    "bfs": 296,
@@ -2475,42 +2475,42 @@
   {
    "bfs": 1001,
    "name": "Doppleschwand",
-   "kanton": "AG"
+   "kanton": "LU"
   },
   {
    "bfs": 1002,
    "name": "Entlebuch",
-   "kanton": "AG"
+   "kanton": "LU"
   },
   {
    "bfs": 1004,
    "name": "Flühli",
-   "kanton": "AG"
+   "kanton": "LU"
   },
   {
    "bfs": 1005,
    "name": "Hasle (LU)",
-   "kanton": "AG"
+   "kanton": "LU"
   },
   {
    "bfs": 1007,
    "name": "Romoos",
-   "kanton": "AG"
+   "kanton": "LU"
   },
   {
    "bfs": 1008,
    "name": "Schüpfheim",
-   "kanton": "AG"
+   "kanton": "LU"
   },
   {
    "bfs": 1009,
    "name": "Werthenstein",
-   "kanton": "AG"
+   "kanton": "LU"
   },
   {
    "bfs": 1010,
    "name": "Escholzmatt-Marbach",
-   "kanton": "AG"
+   "kanton": "LU"
   },
   {
    "bfs": 1021,
@@ -2665,102 +2665,102 @@
   {
    "bfs": 1081,
    "name": "Beromünster",
-   "kanton": "AG"
+   "kanton": "LU"
   },
   {
    "bfs": 1082,
    "name": "Büron",
-   "kanton": "AG"
+   "kanton": "LU"
   },
   {
    "bfs": 1083,
    "name": "Buttisholz",
-   "kanton": "AG"
+   "kanton": "LU"
   },
   {
    "bfs": 1084,
    "name": "Eich",
-   "kanton": "AG"
+   "kanton": "LU"
   },
   {
    "bfs": 1085,
    "name": "Geuensee",
-   "kanton": "AG"
+   "kanton": "LU"
   },
   {
    "bfs": 1086,
    "name": "Grosswangen",
-   "kanton": "AG"
+   "kanton": "LU"
   },
   {
    "bfs": 1088,
    "name": "Hildisrieden",
-   "kanton": "AG"
+   "kanton": "LU"
   },
   {
    "bfs": 1089,
    "name": "Knutwil",
-   "kanton": "AG"
+   "kanton": "LU"
   },
   {
    "bfs": 1091,
    "name": "Mauensee",
-   "kanton": "AG"
+   "kanton": "LU"
   },
   {
    "bfs": 1093,
    "name": "Neuenkirch",
-   "kanton": "AG"
+   "kanton": "LU"
   },
   {
    "bfs": 1094,
    "name": "Nottwil",
-   "kanton": "AG"
+   "kanton": "LU"
   },
   {
    "bfs": 1095,
    "name": "Oberkirch",
-   "kanton": "AG"
+   "kanton": "LU"
   },
   {
    "bfs": 1097,
    "name": "Rickenbach (LU)",
-   "kanton": "AG"
+   "kanton": "LU"
   },
   {
    "bfs": 1098,
    "name": "Ruswil",
-   "kanton": "AG"
+   "kanton": "LU"
   },
   {
    "bfs": 1099,
    "name": "Schenkon",
-   "kanton": "AG"
+   "kanton": "LU"
   },
   {
    "bfs": 1100,
    "name": "Schlierbach",
-   "kanton": "AG"
+   "kanton": "LU"
   },
   {
    "bfs": 1102,
    "name": "Sempach",
-   "kanton": "AG"
+   "kanton": "LU"
   },
   {
    "bfs": 1103,
    "name": "Sursee",
-   "kanton": "AG"
+   "kanton": "LU"
   },
   {
    "bfs": 1104,
    "name": "Triengen",
-   "kanton": "AG"
+   "kanton": "LU"
   },
   {
    "bfs": 1107,
    "name": "Wolhusen",
-   "kanton": "AG"
+   "kanton": "LU"
   },
   {
    "bfs": 1121,
@@ -5640,37 +5640,37 @@
   {
    "bfs": 3721,
    "name": "Bonaduz",
-   "kanton": "AG"
+   "kanton": "GR"
   },
   {
    "bfs": 3722,
    "name": "Domat/Ems",
-   "kanton": "AG"
+   "kanton": "GR"
   },
   {
    "bfs": 3723,
    "name": "Rhäzüns",
-   "kanton": "AG"
+   "kanton": "GR"
   },
   {
    "bfs": 3731,
    "name": "Felsberg",
-   "kanton": "AG"
+   "kanton": "GR"
   },
   {
    "bfs": 3732,
    "name": "Flims",
-   "kanton": "AG"
+   "kanton": "GR"
   },
   {
    "bfs": 3733,
    "name": "Tamins",
-   "kanton": "AG"
+   "kanton": "GR"
   },
   {
    "bfs": 3734,
    "name": "Trin",
-   "kanton": "AG"
+   "kanton": "GR"
   },
   {
    "bfs": 3746,
@@ -5820,42 +5820,42 @@
   {
    "bfs": 3851,
    "name": "Davos",
-   "kanton": "VS"
+   "kanton": "GR"
   },
   {
    "bfs": 3861,
    "name": "Fideris",
-   "kanton": "VS"
+   "kanton": "GR"
   },
   {
    "bfs": 3862,
    "name": "Furna",
-   "kanton": "VS"
+   "kanton": "GR"
   },
   {
    "bfs": 3863,
    "name": "Jenaz",
-   "kanton": "VS"
+   "kanton": "GR"
   },
   {
    "bfs": 3871,
    "name": "Klosters",
-   "kanton": "VS"
+   "kanton": "GR"
   },
   {
    "bfs": 3881,
    "name": "Conters im Prättigau",
-   "kanton": "VS"
+   "kanton": "GR"
   },
   {
    "bfs": 3882,
    "name": "Küblis",
-   "kanton": "VS"
+   "kanton": "GR"
   },
   {
    "bfs": 3891,
    "name": "Luzein",
-   "kanton": "VS"
+   "kanton": "GR"
   },
   {
    "bfs": 3901,
@@ -5915,17 +5915,17 @@
   {
    "bfs": 3961,
    "name": "Grüsch",
-   "kanton": "VS"
+   "kanton": "GR"
   },
   {
    "bfs": 3962,
    "name": "Schiers",
-   "kanton": "VS"
+   "kanton": "GR"
   },
   {
    "bfs": 3972,
    "name": "Seewis im Prättigau",
-   "kanton": "VS"
+   "kanton": "GR"
   },
   {
    "bfs": 3981,

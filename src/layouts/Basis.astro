@@ -4,7 +4,7 @@ import { ENTWURFSPHASE, NAVIGATION, pfad, datei } from '../lib/site';
 
 interface Props { titel: string; beschreibung: string; bereich?: string }
 const { titel, beschreibung, bereich } = Astro.props;
-const seitentitel = titel === 'meinCH' ? 'meinCH – Schweiz verstehen' : `${titel} – meinCH`;
+const seitentitel = titel === 'meinCH' ? 'meinCH' : `${titel} – meinCH`;
 ---
 <!doctype html>
 <html lang="de-CH">

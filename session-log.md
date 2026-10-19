@@ -18,3 +18,8 @@
 
 - **Done:** repo transferred to the GitHub organisation Stein-Clankers (like Archipelago). Site URL, footer and README links updated; Pages setting carried over.
 - **Changed:** now https://github.com/Stein-Clankers/meinCH, site https://stein-clankers.github.io/meinCH/. The old markussteinbrecher.github.io/meinCH URL no longer serves the site (Pages does not redirect).
+
+## 2026-10-19 (no marketing)
+
+- **Changed:** home page, page title, README and CLAUDE.md lose the slogan («die Schweiz verstehen, nicht nur den Test bestehen», «neutral, werbefrei»). Home now says what's on the site. CLAUDE.md gets a «Ton: nur Inhalt, kein Marketing» rule. meinCH added to Clanker City (steinclankers repo).
+- **Fixed:** municipality→canton mapping in `tools/gemeinden.mjs`. BFS `HistoricalCode` is only unique per level (district Horgen and the municipality Vionnaz share 10078), so 9 Horgen municipalities were counted in Valais and others shifted too (ZH showed 151 instead of 160; LU, AG, GR, VS also wrong). Lookup is now per level and the script fails if a municipality has no canton. Spotted by Markus.
