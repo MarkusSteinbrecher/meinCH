@@ -1,0 +1,66 @@
+---
+titel: Direkte Demokratie
+beschreibung: Volksinitiative, fakultatives und obligatorisches Referendum, Volksmehr und Ständemehr.
+thema: politik
+reihenfolge: 40
+geprueft_am: 2026-10-19
+quellen:
+  - titel: Bundesverfassung der Schweizerischen Eidgenossenschaft (SR 101)
+    url: https://www.fedlex.admin.ch/eli/cc/1999/404/de
+    artikel: Art. 136, 139–142
+---
+import Zahlen from '../../../components/viz/Zahlen.astro';
+import Ablauf from '../../../components/viz/Ablauf.astro';
+import Staendemehr from '../../../components/viz/Staendemehr.astro';
+
+<Zahlen zahlen={[
+  { wert: '18', label: 'Stimmrechtsalter' },
+  { wert: '100 000', label: 'Unterschriften', hinweis: 'für eine Volksinitiative' },
+  { wert: '50 000', label: 'Unterschriften', hinweis: 'für ein Referendum' },
+  { wert: '4', label: 'Abstimmungstermine', hinweis: 'pro Jahr' },
+]} />
+
+In der Schweiz wählt das Volk nicht nur das Parlament. Es entscheidet auch direkt über Sachfragen. Stimmberechtigt sind Schweizerinnen und Schweizer ab **18 Jahren** (Art. 136 BV). Der Bund legt jedes Jahr **vier Termine** für Volksabstimmungen fest.
+
+## Volksinitiative: das Volk schlägt etwas vor
+
+Mit einer Volksinitiative kann man eine Änderung der **Bundesverfassung** verlangen (Art. 139 BV).
+
+<Ablauf titel="Ablauf einer Volksinitiative" schritte={[
+  { zahl: '100 000', titel: 'Unterschriften sammeln', text: 'innert 18 Monaten' },
+  { titel: 'Bundesrat und Parlament beraten', text: 'Sie empfehlen Ja oder Nein und können einen Gegenvorschlag machen.' },
+  { titel: 'Volksabstimmung', text: 'Alle Stimmberechtigten entscheiden.' },
+  { zahl: '2 ×', titel: 'Volks- und Ständemehr', text: 'Mehrheit der Stimmenden und Mehrheit der Kantone' },
+]} />
+
+## Fakultatives Referendum: das Volk kann Nein sagen
+
+Gegen neue **Bundesgesetze** und bestimmte Staatsverträge kann man das Referendum ergreifen (Art. 141 BV). Dann kommt das Gesetz vors Volk.
+
+<Ablauf titel="Ablauf eines fakultativen Referendums" schritte={[
+  { titel: 'Parlament beschliesst ein Gesetz', text: 'Das Gesetz wird veröffentlicht.' },
+  { zahl: '50 000', titel: 'Unterschriften sammeln', text: 'innert 100 Tagen, oder 8 Kantone verlangen es' },
+  { titel: 'Volksabstimmung', text: 'Alle Stimmberechtigten entscheiden.' },
+  { zahl: '1 ×', titel: 'Volksmehr', text: 'Es genügt die Mehrheit der Stimmenden.' },
+]} />
+
+Kommt das Referendum nicht zustande, tritt das Gesetz ohne Abstimmung in Kraft.
+
+## Obligatorisches Referendum: automatisch vors Volk
+
+Jede **Änderung der Bundesverfassung** kommt automatisch zur Abstimmung, ebenso der Beitritt zu Organisationen für kollektive Sicherheit oder zu supranationalen Gemeinschaften (Art. 140 BV). Es braucht Volks- und Ständemehr.
+
+## Volksmehr und Ständemehr
+
+- **Volksmehr:** Mehr als die Hälfte aller gültigen Stimmen in der ganzen Schweiz ist Ja.
+- **Ständemehr:** In mehr als der Hälfte der Kantone ist das Volk dafür. Das Resultat eines Kantons ist seine **Standesstimme** (Art. 142 BV).
+
+<Staendemehr />
+
+Weil kleine Kantone gleich viel zählen wie grosse, kann eine Vorlage am Ständemehr scheitern, obwohl die Mehrheit der Stimmenden Ja gesagt hat.
+
+| | Volksinitiative | Fakultatives Referendum | Obligatorisches Referendum |
+|---|---|---|---|
+| Worüber? | Verfassungsänderung | Gesetz | Verfassungsänderung |
+| Wer löst aus? | 100 000 Stimmberechtigte | 50 000 Stimmberechtigte oder 8 Kantone | automatisch |
+| Was braucht es? | Volk + Stände | Volk | Volk + Stände |

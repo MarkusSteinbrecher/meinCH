@@ -1,0 +1,40 @@
+---
+/**
+ * The three state levels as a grid: rows Bund / Kanton / Gemeinde, columns legislative /
+ * executive / judiciary. `beispiel` fills the canton and municipality rows for one canton.
+ */
+import { GEMEINDEN } from '../../lib/kantone';
+
+const ebenen = [
+  {
+    name: 'Bund', anzahl: '1', zustaendig: 'Aussenpolitik, Armee, Zoll, Nationalstrassen, AHV',
+    gewalten: ['Bundesversammlung: Nationalrat und Ständerat', 'Bundesrat (7)', 'Bundesgericht'],
+  },
+  {
+    name: 'Kantone', anzahl: '26', zustaendig: 'Schulen, Spitäler, Polizei, Kantonsstrassen',
+    gewalten: ['Kantonsparlament (z. B. Kantonsrat)', 'Regierungsrat', 'Kantonale Gerichte'],
+  },
+  {
+    name: 'Gemeinden', anzahl: String(GEMEINDEN.length), zustaendig: 'Volksschule, Wasser, Abfall, Ortsplanung',
+    gewalten: ['Gemeindeversammlung oder Gemeindeparlament', 'Gemeinderat bzw. Stadtrat', 'Friedensrichter (je nach Kanton)'],
+  },
+];
+---
+<figure class="ebenen">
+  <div class="ebenen__kopf" aria-hidden="true">
+    <span></span><span>Gesetzgebung</span><span>Regierung</span><span>Rechtsprechung</span>
+  </div>
+  {ebenen.map((e, i) => (
+    <div class="ebenen__zeile" style={`--stufe:${i}`}>
+      <div class="ebenen__name">
+        <strong>{e.name}</strong>
+        <span class="ebenen__anzahl">{e.anzahl}</span>
+        <span class="ebenen__aufgaben">{e.zustaendig}</span>
+      </div>
+      {e.gewalten.map((g, j) => (
+        <div class="ebenen__gewalt"><span class="ebenen__label">{['Gesetzgebung', 'Regierung', 'Rechtsprechung'][j]}</span>{g}</div>
+      ))}
+    </div>
+  ))}
+  <figcaption>Die drei Staatsebenen und die drei Gewalten. Jede Ebene erhebt eigene Steuern und hat eigene Behörden.</figcaption>
+</figure>

@@ -1,0 +1,24 @@
+---
+/**
+ * Unit chart: one dot per National Council seat, one row per canton, sorted by seats.
+ * Single series, so one ink colour; the highlighted canton uses the accent.
+ */
+import { POLITIK } from '../../lib/politik';
+import { KANTONE } from '../../lib/kantone';
+
+interface Props { hervorheben?: string }
+const { hervorheben = 'ZH' } = Astro.props;
+const zeilen = KANTONE.map((k) => ({ ...k, sitze: POLITIK.nationalrat_sitze.sitze[k.code] })).sort((a, b) => b.sitze - a.sitze || a.nr - b.nr);
+---
+<figure class="sitze">
+  <ol class="sitze__liste">
+    {zeilen.map((k) => (
+      <li class="sitze__zeile" data-hervor={k.code === hervorheben ? '' : undefined} title={`${k.name}: ${k.sitze} ${k.sitze === 1 ? 'Sitz' : 'Sitze'}`}>
+        <span class="sitze__kanton">{k.code}</span>
+        <span class="sitze__punkte" aria-hidden="true">{Array.from({ length: k.sitze }, () => <i></i>)}</span>
+        <span class="sitze__zahl">{k.sitze}</span>
+      </li>
+    ))}
+  </ol>
+  <figcaption>Sitze im Nationalrat pro Kanton, Legislatur 2023–2027. Ein Punkt ist ein Sitz.{POLITIK.nationalrat_sitze.ungeprueft && ' Noch ungeprüft.'}</figcaption>
+</figure>

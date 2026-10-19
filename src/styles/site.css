@@ -67,3 +67,89 @@ td[data-num], th[data-num] { text-align: right; font-variant-numeric: tabular-nu
 .kein-amt strong { color: var(--fg-default); font-weight: var(--weight-medium); }
 .site-fuss { border-top: var(--border-hairline) solid var(--border-subtle); padding-block: var(--space-8) var(--space-12); display: grid; gap: var(--space-2); font: var(--font-caption); letter-spacing: var(--tracking-xs); color: var(--fg-muted); }
 .site-fuss a { color: inherit; }
+
+/* ---------- Visuals in lessons ---------- */
+/* Figures may use the full column; prose keeps the reading measure. */
+.seite-rumpf .sd-prose { max-width: none; }
+.seite-rumpf .sd-prose > :not(figure, table, dl, astro-island, .balken-paar) { max-width: var(--measure); }
+.sd-prose figure { margin: var(--space-8) 0 var(--space-10); }
+.sd-prose figcaption, .ablauf__titel, .balken__titel { font: var(--font-caption); letter-spacing: var(--tracking-xs); color: var(--fg-muted); }
+
+/* Key figures */
+.zahlen { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: var(--space-4); margin: var(--space-8) 0; }
+.zahlen__eintrag { display: flex; flex-direction: column; gap: var(--space-half); padding-top: var(--space-3); border-top: var(--border-focus) solid var(--fg-default); }
+.sd-prose .zahlen dd { margin: 0; }
+.zahlen__wert { order: -1; font: var(--weight-bold) var(--text-3xl) / var(--leading-3xl) var(--font-sans); letter-spacing: var(--tracking-3xl); font-variant-numeric: tabular-nums; }
+.zahlen dt { font: var(--font-label); letter-spacing: var(--tracking-sm); }
+.zahlen__hinweis { font: var(--font-caption); letter-spacing: var(--tracking-xs); color: var(--fg-muted); }
+
+/* State levels grid */
+.ebenen { display: grid; grid-template-columns: minmax(150px, 1.2fr) repeat(3, minmax(0, 1fr)); border-top: var(--border-hairline) solid var(--border-strong); }
+.ebenen__kopf, .ebenen__zeile { display: contents; }
+.ebenen__kopf span { padding: var(--space-2) var(--space-3); font: var(--font-label); letter-spacing: var(--tracking-sm); color: var(--fg-muted); border-bottom: var(--border-hairline) solid var(--border-subtle); }
+.ebenen__name, .ebenen__gewalt { padding: var(--space-4) var(--space-3); border-bottom: var(--border-hairline) solid var(--border-subtle); font: var(--font-body); letter-spacing: var(--tracking-md); }
+.ebenen__name { display: grid; gap: var(--space-1); align-content: start; background: var(--bg-surface); }
+.ebenen__name strong { font: var(--font-title); letter-spacing: var(--tracking-xl); }
+.ebenen__anzahl { font: var(--weight-bold) var(--text-2xl) / var(--leading-2xl) var(--font-sans); letter-spacing: var(--tracking-2xl); font-variant-numeric: tabular-nums; }
+.ebenen__aufgaben { font: var(--font-caption); letter-spacing: var(--tracking-xs); color: var(--fg-muted); }
+.ebenen__label { display: none; }
+.ebenen figcaption { grid-column: 1 / -1; padding-top: var(--space-3); }
+@media (max-width: 700px) {
+  .ebenen { grid-template-columns: minmax(0, 1fr); }
+  .ebenen__kopf { display: none; }
+  .ebenen__name { margin-top: var(--space-4); }
+  .ebenen__gewalt { display: grid; gap: var(--space-half); padding-block: var(--space-2); }
+  .ebenen__label { display: block; font: var(--font-label); letter-spacing: var(--tracking-sm); color: var(--fg-muted); }
+}
+
+/* National Council seats per canton: one dot per seat */
+.sitze__liste { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-1); }
+.sd-prose .sitze__zeile { margin: 0; display: grid; grid-template-columns: 3ch minmax(0, 1fr) 3ch; align-items: center; gap: var(--space-3); font: var(--font-caption); letter-spacing: var(--tracking-xs); }
+.sitze__kanton { font-weight: var(--weight-medium); }
+.sitze__zahl { text-align: right; font-variant-numeric: tabular-nums; color: var(--fg-muted); }
+.sitze__punkte { display: flex; flex-wrap: wrap; gap: var(--space-half); }
+.sitze__punkte i { width: var(--space-3); height: var(--space-3); border-radius: var(--radius-pill); background: var(--fg-default); }
+.sitze__zeile[data-hervor] .sitze__punkte i { background: var(--accent-solid); }
+.sitze__zeile[data-hervor] .sitze__kanton, .sitze__zeile[data-hervor] .sitze__zahl { color: var(--accent-fg); }
+.sitze figcaption { margin-top: var(--space-3); }
+
+/* Party bars */
+.balken { display: grid; gap: var(--space-3); }
+.balken__liste { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-2); }
+.sd-prose .balken__liste li { margin: 0; display: grid; grid-template-columns: 7ch minmax(0, 1fr) 3ch; align-items: center; gap: var(--space-3); font: var(--font-caption); letter-spacing: var(--tracking-xs); }
+.balken__spur { display: block; height: var(--space-4); }
+.balken__wert { display: block; height: 100%; width: calc(var(--anteil) * 100%); min-width: var(--space-1); background: var(--fg-default); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
+.balken__zahl { text-align: right; font-variant-numeric: tabular-nums; }
+.balken-paar { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-10); }
+@media (max-width: 700px) { .balken-paar { grid-template-columns: minmax(0, 1fr); gap: var(--space-6); } }
+
+/* Federal Council departments */
+.departemente ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: var(--space-3); }
+.sd-prose .departemente li { margin: 0; display: grid; gap: var(--space-1); align-content: start; padding: var(--space-4); background: var(--bg-surface); border-radius: var(--radius-md); }
+.departemente__kopf { display: flex; align-items: center; gap: var(--space-2); font: var(--font-title); letter-spacing: var(--tracking-xl); }
+.departemente__thema { font: var(--font-body); letter-spacing: var(--tracking-md); }
+.departemente__person { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); padding-top: var(--space-2); margin-top: var(--space-1); border-top: var(--border-hairline) solid var(--border-subtle); font: var(--font-body); letter-spacing: var(--tracking-md); }
+.departemente__partei { font: var(--font-caption); letter-spacing: var(--tracking-xs); color: var(--fg-muted); }
+.departemente figcaption { margin-top: var(--space-3); }
+
+/* Process steps */
+.ablauf { display: grid; gap: var(--space-3); }
+.ablauf__schritte { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(var(--n), minmax(0, 1fr)); gap: var(--space-2); counter-reset: none; }
+.sd-prose .ablauf__schritte li { margin: 0; display: grid; gap: var(--space-1); align-content: start; padding: var(--space-4); background: var(--bg-surface); border-top: var(--border-focus) solid var(--fg-default); border-radius: 0 0 var(--radius-md) var(--radius-md); font: var(--font-caption); letter-spacing: var(--tracking-xs); color: var(--fg-muted); }
+.ablauf__schritte li:last-child { border-top-color: var(--accent-solid); }
+.ablauf__nr { font: var(--font-label); letter-spacing: var(--tracking-sm); color: var(--fg-muted); }
+.ablauf__zahl { font: var(--weight-bold) var(--text-2xl) / var(--leading-2xl) var(--font-sans); letter-spacing: var(--tracking-2xl); color: var(--fg-default); font-variant-numeric: tabular-nums; }
+.ablauf__schritte strong { font: var(--font-body); font-weight: var(--weight-medium); letter-spacing: var(--tracking-md); color: var(--fg-default); }
+@media (max-width: 700px) { .ablauf__schritte { grid-template-columns: minmax(0, 1fr); } }
+
+/* Double-majority map */
+.staendemehr svg { width: 100%; max-width: 640px; height: auto; display: block; }
+.staendemehr svg > path:not([class]) { fill: var(--fill-active); }
+.staendemehr svg > path[data-halb] { fill: var(--accent-solid); }
+.staendemehr__seen { fill: var(--bg-page); }
+.staendemehr__grenzen { fill: none; stroke: var(--bg-page); stroke-width: 1.5; stroke-linejoin: round; }
+.legende { list-style: none; margin: var(--space-3) 0 var(--space-2); padding: 0; display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-6); }
+.sd-prose .legende li { margin: 0; display: flex; align-items: center; gap: var(--space-2); font: var(--font-caption); letter-spacing: var(--tracking-xs); }
+.legende__feld { width: var(--space-4); height: var(--space-4); border-radius: var(--radius-sm); background: var(--fill-active); }
+.legende__feld[data-halb] { background: var(--accent-solid); }
+@media (max-width: 700px) { .sd-prose table { display: block; overflow-x: auto; } }

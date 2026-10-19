@@ -1,0 +1,22 @@
+---
+/** The seven departments with head and party, as a grid of tiles. */
+import Icon from '../Icon.astro';
+import { POLITIK } from '../../lib/politik';
+
+const { departemente, praesidium, ungeprueft } = POLITIK.bundesrat;
+const zusammensetzung = Object.entries(departemente.reduce<Record<string, number>>((a, d) => ({ ...a, [d.partei]: (a[d.partei] ?? 0) + 1 }), {}))
+  .sort((a, b) => b[1] - a[1]).map(([p, n]) => `${n} ${p}`).join(' · ');
+---
+<figure class="departemente">
+  <ul>
+    {departemente.map((d) => (
+      <li>
+        <span class="departemente__kopf"><Icon name={d.icon} /><strong>{d.kuerzel}</strong></span>
+        <span class="departemente__thema">{d.kurz}</span>
+        <span class="departemente__person">{d.vorsteher}{d.vorsteher === praesidium.name && <span class="sd-badge">Bundespräsident {praesidium.jahr}</span>}</span>
+        <span class="departemente__partei">{d.partei}</span>
+      </li>
+    ))}
+  </ul>
+  <figcaption>Der Bundesrat, Stand 1. Januar 2026: {zusammensetzung}.{ungeprueft && ' Namen noch ungeprüft.'}</figcaption>
+</figure>

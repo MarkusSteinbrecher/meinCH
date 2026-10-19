@@ -1,0 +1,18 @@
+---
+/** A process as numbered steps in a row (stacked on phones). Each step: a big figure, a title, one line. */
+interface Props { titel: string; schritte: { zahl?: string; titel: string; text: string }[] }
+const { titel, schritte } = Astro.props;
+---
+<figure class="ablauf">
+  <figcaption class="ablauf__titel">{titel}</figcaption>
+  <ol class="ablauf__schritte" style={`--n:${schritte.length}`}>
+    {schritte.map((s, i) => (
+      <li>
+        <span class="ablauf__nr">{i + 1}</span>
+        {s.zahl && <span class="ablauf__zahl">{s.zahl}</span>}
+        <strong>{s.titel}</strong>
+        <span>{s.text}</span>
+      </li>
+    ))}
+  </ol>
+</figure>

@@ -1,0 +1,23 @@
+---
+/** Seats per party as horizontal bars, sorted, values labelled. One series, one ink colour. */
+import { POLITIK } from '../../lib/politik';
+
+interface Props { rat: 'nationalrat' | 'staenderat' }
+const { rat } = Astro.props;
+const parteien = POLITIK.parteien[rat];
+const total = parteien.reduce((a, p) => a + p.sitze, 0);
+const max = Math.max(...parteien.map((p) => p.sitze));
+const titel = rat === 'nationalrat' ? 'Nationalrat' : 'Ständerat';
+---
+<figure class="balken">
+  <figcaption class="balken__titel">{titel}: {total} Sitze nach Partei, Wahlen 2023{POLITIK.parteien.ungeprueft && ' (ungeprüft)'}</figcaption>
+  <ol class="balken__liste">
+    {parteien.map((p) => (
+      <li title={`${p.partei}: ${p.sitze} von ${total} Sitzen`}>
+        <span class="balken__name">{p.partei}</span>
+        <span class="balken__spur"><span class="balken__wert" style={`--anteil:${p.sitze / max}`}></span></span>
+        <span class="balken__zahl">{p.sitze}</span>
+      </li>
+    ))}
+  </ol>
+</figure>

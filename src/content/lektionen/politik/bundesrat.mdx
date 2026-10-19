@@ -1,0 +1,44 @@
+---
+titel: Der Bundesrat
+beschreibung: Die Regierung der Schweiz, ihre sieben Departemente und wie sie zusammengesetzt ist.
+thema: politik
+reihenfolge: 30
+geprueft_am: 2026-10-19
+quellen:
+  - titel: Bundesverfassung der Schweizerischen Eidgenossenschaft (SR 101)
+    url: https://www.fedlex.admin.ch/eli/cc/1999/404/de
+    artikel: Art. 174–178
+  - titel: Der Bundesrat, Mitglieder und Departemente
+    url: https://www.admin.ch/gov/de/start/bundesrat/mitglieder-des-bundesrates.html
+---
+import Zahlen from '../../../components/viz/Zahlen.astro';
+import Bundesrat from '../../../components/viz/Bundesrat.astro';
+
+<Zahlen zahlen={[
+  { wert: '7', label: 'Mitglieder' },
+  { wert: '7', label: 'Departemente', hinweis: 'je eines pro Mitglied' },
+  { wert: '4', label: 'Jahre', hinweis: 'Amtsdauer' },
+  { wert: '1', label: 'Jahr', hinweis: 'Amtszeit des Bundespräsidiums' },
+]} />
+
+Der **Bundesrat** ist die Regierung der Schweiz (Art. 174 BV). Er hat sieben Mitglieder. Jedes Mitglied leitet ein **Departement**, vergleichbar mit einem Ministerium.
+
+<Bundesrat />
+
+## Wahl
+
+- Die **Vereinigte Bundesversammlung** wählt den Bundesrat, nicht das Volk (Art. 175 BV).
+- Die Wahl findet alle vier Jahre statt, nach den Nationalratswahlen. Wer im Amt ist, wird in der Regel wiedergewählt.
+- Die Landesgegenden und Sprachregionen sollen angemessen vertreten sein (Art. 175 Abs. 4 BV).
+
+## Kollegialprinzip
+
+Der Bundesrat entscheidet **als Gremium** (Art. 177 BV). Nach aussen vertreten alle Mitglieder den gemeinsamen Entscheid, auch wenn sie in der Sitzung dagegen waren. Es gibt keinen Regierungschef.
+
+## Bundespräsident
+
+Die Bundesversammlung wählt jedes Jahr ein Mitglied zum **Bundespräsidenten** oder zur **Bundespräsidentin** (Art. 176 BV). Er oder sie leitet die Sitzungen und repräsentiert die Schweiz, hat aber nicht mehr Macht als die anderen. Im nächsten Jahr ist eine Wiederwahl nicht möglich, das Amt wechselt.
+
+## Konkordanz
+
+Die grössten Parteien teilen sich die sieben Sitze ungefähr nach ihrer Stärke im Parlament. Diese Aufteilung nennt man **Konkordanz**. Von 1959 bis 2003 galt die **Zauberformel**: je 2 Sitze für FDP, CVP (heute Mitte) und SP, 1 Sitz für die SVP.

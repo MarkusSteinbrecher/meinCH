@@ -15,7 +15,7 @@ const t = topo as unknown as Topology<{
 
 export const KARTEN_QUELLE = {
   titel: 'BFS, Generalisierte Gemeindegrenzen 2026 (swisstopo), aufbereitet von swiss-maps',
-  url: 'https://www.bfs.admin.ch/bfs/de/home/dienstleistungen/geostat/geodaten-bundesstatistik/administrative-grenzen/generalisierte-gemeindegrenzen.html',
+  url: 'https://www.bfs.admin.ch/bfs/de/home.assetdetail.34367751.html',
 };
 
 export type Flaeche = { id: number; code: string; name: string; d: string };

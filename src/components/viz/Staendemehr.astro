@@ -1,0 +1,21 @@
+---
+/** Map of full and half cantonal votes for the double majority (Art. 142 BV). Static SVG, no JS. */
+import { schweizKarte } from '../../lib/karte';
+import { HALBKANTONE } from '../../lib/politik';
+
+const karte = schweizKarte(640);
+---
+<figure class="staendemehr">
+  <svg viewBox={`0 0 ${karte.breite} ${karte.hoehe}`} role="img" aria-label="Karte: 20 Kantone mit ganzer Standesstimme, 6 mit halber">
+    {karte.flaechen.map((f) => (
+      <path d={f.d} data-halb={HALBKANTONE.includes(f.code) ? '' : undefined}><title>{f.name}: {HALBKANTONE.includes(f.code) ? 'halbe Standesstimme' : 'ganze Standesstimme'}</title></path>
+    ))}
+    <path class="staendemehr__seen" d={karte.seen} />
+    <path class="staendemehr__grenzen" d={karte.grenzen} />
+  </svg>
+  <ul class="legende">
+    <li><span class="legende__feld"></span>Ganze Standesstimme: 20 Kantone</li>
+    <li><span class="legende__feld" data-halb></span>Halbe Standesstimme: OW, NW, BS, BL, AR, AI</li>
+  </ul>
+  <figcaption>20 + 6 × ½ = 23 Standesstimmen. Für das Ständemehr braucht es mindestens 12.</figcaption>
+</figure>

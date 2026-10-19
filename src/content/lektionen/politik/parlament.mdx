@@ -1,0 +1,63 @@
+---
+titel: Das Parlament
+beschreibung: Die Bundesversammlung mit Nationalrat und Ständerat, wie die Sitze verteilt sind und was das Parlament wählt.
+thema: politik
+reihenfolge: 20
+geprueft_am: 2026-10-19
+quellen:
+  - titel: Bundesverfassung der Schweizerischen Eidgenossenschaft (SR 101)
+    url: https://www.fedlex.admin.ch/eli/cc/1999/404/de
+    artikel: Art. 145, 148–151, 156–157, 168
+  - titel: BFS, Nationalratswahlen 2023
+    url: https://www.bfs.admin.ch/bfs/de/home/statistiken/politik/wahlen/eidgenoessische-wahlen/2023.html
+  - titel: Die Bundesversammlung
+    url: https://www.parlament.ch/de
+---
+import Zahlen from '../../../components/viz/Zahlen.astro';
+import SitzeKantone from '../../../components/viz/SitzeKantone.astro';
+import Parteien from '../../../components/viz/Parteien.astro';
+
+<Zahlen zahlen={[
+  { wert: '246', label: 'Bundesversammlung' },
+  { wert: '200', label: 'Nationalrat', hinweis: 'vertritt das Volk' },
+  { wert: '46', label: 'Ständerat', hinweis: 'vertritt die Kantone' },
+  { wert: '4', label: 'Jahre', hinweis: 'Amtsdauer' },
+]} />
+
+Die **Bundesversammlung** ist das Parlament der Schweiz. Sie besteht aus zwei Kammern, die gleich viel zu sagen haben (Art. 148 BV). Ein Gesetz gilt erst, wenn **beide Kammern** zugestimmt haben.
+
+## Nationalrat: nach Bevölkerung
+
+Die 200 Sitze werden nach der Bevölkerung auf die Kantone verteilt. Jeder Kanton hat mindestens einen Sitz (Art. 149 BV). Der Kanton Zürich stellt am meisten Nationalrätinnen und Nationalräte.
+
+<SitzeKantone hervorheben="ZH" />
+
+## Ständerat: zwei pro Kanton
+
+Jeder Kanton wählt **zwei** Mitglieder in den Ständerat, egal wie gross er ist. Obwalden, Nidwalden, Basel-Stadt, Basel-Landschaft, Appenzell Ausserrhoden und Appenzell Innerrhoden wählen je **eins** (Art. 150 BV). So hat Uri gleich viel Gewicht wie Zürich. Wie gewählt wird, bestimmt jeder Kanton selbst.
+
+## Parteien
+
+<div class="balken-paar">
+  <Parteien rat="nationalrat" />
+  <Parteien rat="staenderat" />
+</div>
+
+Im Nationalrat werden die Sitze proportional zu den Stimmen der Parteien verteilt (Proporz). Im Ständerat zählen die Personen stärker, die meisten Kantone wählen nach dem Mehrheitsprinzip (Majorz). Darum sieht die Verteilung in den beiden Kammern verschieden aus.
+
+## Wie das Parlament arbeitet
+
+- Die Räte treffen sich zu **vier Sessionen** pro Jahr (Frühling, Sommer, Herbst, Winter), jeweils drei Wochen.
+- Die Mitglieder sind **Milizparlamentarier**: Die meisten haben neben dem Mandat einen Beruf.
+- Mitglieder derselben Partei bilden eine **Fraktion**.
+
+## Was die Vereinigte Bundesversammlung wählt
+
+Für Wahlen tagen beide Kammern gemeinsam als **Vereinigte Bundesversammlung** (Art. 157 und 168 BV). Sie wählt:
+
+- die **7 Mitglieder des Bundesrates** und jedes Jahr den Bundespräsidenten oder die Bundespräsidentin,
+- die **Bundeskanzlerin** oder den Bundeskanzler,
+- die **Richterinnen und Richter** des Bundesgerichts,
+- im Krieg den **General** der Armee.
+
+Die nächsten Nationalrats- und Ständeratswahlen finden im Oktober 2027 statt.

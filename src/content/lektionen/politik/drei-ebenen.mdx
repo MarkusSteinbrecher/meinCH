@@ -1,46 +1,43 @@
 ---
 titel: Bund, Kantone, Gemeinden
-beschreibung: Die Schweiz hat drei Staatsebenen. Wer wofür zuständig ist und wie die Bundesbehörden zusammengesetzt sind.
+beschreibung: Die drei Staatsebenen der Schweiz, wer wofür zuständig ist und wie die Gewalten auf jeder Ebene verteilt sind.
 thema: politik
 reihenfolge: 10
 geprueft_am: 2026-10-19
 quellen:
   - titel: Bundesverfassung der Schweizerischen Eidgenossenschaft (SR 101)
     url: https://www.fedlex.admin.ch/eli/cc/1999/404/de
-    artikel: Art. 1, 3, 50, 139–141, 148–150, 175, 188
+    artikel: Art. 1, 3, 42, 50, 148, 174, 188
   - titel: BFS, Amtliches Gemeindeverzeichnis der Schweiz
     url: https://www.agvchapp.bfs.admin.ch/de/state/query
 ---
+import Zahlen from '../../../components/viz/Zahlen.astro';
+import Ebenen from '../../../components/viz/Ebenen.astro';
+import { GEMEINDEN } from '../../../lib/kantone';
 
-Die Schweiz ist ein Bundesstaat. Die Macht ist auf drei Ebenen verteilt: den **Bund**, die **26 Kantone** und die **Gemeinden** (am 1. Januar 2026 waren es 2110).
+<Zahlen zahlen={[
+  { wert: '1', label: 'Bund' },
+  { wert: '26', label: 'Kantone' },
+  { wert: String(GEMEINDEN.length), label: 'Gemeinden', hinweis: 'Stand 1. Januar 2026' },
+  { wert: '3', label: 'Gewalten', hinweis: 'auf jeder Ebene' },
+]} />
+
+Die Schweiz ist ein **Bundesstaat**. Die Kantone haben sich zum Bund zusammengeschlossen und ihm einen Teil ihrer Aufgaben übertragen. Die Gemeinden sind Teil ihres Kantons.
+
+<Ebenen />
 
 ## Wer ist wofür zuständig?
 
-- **Bund:** nur für das, was ihm die Bundesverfassung ausdrücklich zuweist, zum Beispiel Aussenpolitik, Armee, Nationalstrassen, Zoll und die Bundessteuern.
-- **Kantone:** für alles, was die Verfassung nicht dem Bund gibt. Die Kantone sind «souverän, soweit ihre Souveränität nicht durch die Bundesverfassung beschränkt ist» (Art. 3 BV). Jeder Kanton hat eine eigene Verfassung, ein eigenes Parlament, eine eigene Regierung und eigene Gerichte. Typische Aufgaben: Schulen, Spitäler, Polizei.
-- **Gemeinden:** Ihre Autonomie ist «nach Massgabe des kantonalen Rechts» gewährleistet (Art. 50 BV). Wie viel eine Gemeinde selbst entscheidet, bestimmt also der Kanton.
+- **Der Bund** übernimmt nur die Aufgaben, die ihm die Bundesverfassung zuweist (Art. 42 BV).
+- **Die Kantone** sind für alles zuständig, was nicht dem Bund gehört. Sie sind «souverän, soweit ihre Souveränität nicht durch die Bundesverfassung beschränkt ist» (Art. 3 BV). Jeder Kanton hat eine eigene Verfassung.
+- **Die Gemeinden** sind so selbständig, wie es das Recht ihres Kantons erlaubt (Art. 50 BV). Deshalb sind Gemeinden von Kanton zu Kanton verschieden organisiert: In kleinen Gemeinden entscheidet die Gemeindeversammlung, in Städten ein gewähltes Parlament.
 
-## Die Bundesbehörden
+## Gewaltenteilung
 
-| Gewalt | Behörde | Zusammensetzung |
-|---|---|---|
-| Gesetzgebung | Bundesversammlung | Nationalrat (200 Mitglieder) und Ständerat (46 Mitglieder) |
-| Regierung | Bundesrat | 7 Mitglieder, gewählt von der Bundesversammlung |
-| Rechtsprechung | Bundesgericht | oberstes Gericht der Schweiz |
+Auf jeder Ebene sind die Aufgaben auf drei Gewalten verteilt, damit niemand zu viel Macht hat:
 
-Die Sitze im **Nationalrat** werden nach der Bevölkerung auf die Kantone verteilt, jeder Kanton hat aber mindestens einen Sitz. Im **Ständerat** hat jeder Kanton zwei Sitze. Ausnahmen sind Obwalden, Nidwalden, Basel-Stadt, Basel-Landschaft, Appenzell Ausserrhoden und Appenzell Innerrhoden mit je einem Sitz. So kommt man auf 46.
+- **Gesetzgebung (Legislative):** erlässt Gesetze und bewilligt das Budget. Beim Bund ist das die Bundesversammlung, die «oberste Gewalt im Bund» (Art. 148 BV).
+- **Regierung (Exekutive):** führt die Gesetze aus. Beim Bund der Bundesrat (Art. 174 BV).
+- **Rechtsprechung (Judikative):** entscheidet Streitfälle. Oberstes Gericht ist das Bundesgericht in Lausanne (Art. 188 BV).
 
-## Direkte Demokratie
-
-Das Volk entscheidet nicht nur bei Wahlen mit, sondern auch über Sachfragen:
-
-- **Volksinitiative:** 100 000 Stimmberechtigte können innert 18 Monaten eine Änderung der Bundesverfassung verlangen.
-- **Fakultatives Referendum:** 50 000 Stimmberechtigte können innert 100 Tagen verlangen, dass über ein neues Bundesgesetz abgestimmt wird.
-- **Obligatorisches Referendum:** Jede Änderung der Bundesverfassung kommt automatisch vors Volk. Sie braucht das **Volksmehr** (Mehrheit der Stimmenden) und das **Ständemehr** (Mehrheit der Kantone).
-
-## Kurz zum Merken
-
-- 3 Ebenen: Bund, 26 Kantone, rund 2100 Gemeinden.
-- Bundesversammlung = Nationalrat 200 + Ständerat 46 = 246 Mitglieder.
-- Bundesrat: 7 Mitglieder.
-- Initiative: 100 000 Unterschriften in 18 Monaten. Referendum: 50 000 in 100 Tagen.
+Weiter: [Parlament](../parlament/), [Bundesrat](../bundesrat/), [Direkte Demokratie](../direkte-demokratie/).

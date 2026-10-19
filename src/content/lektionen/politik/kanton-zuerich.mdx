@@ -1,0 +1,58 @@
+---
+titel: Politik im Kanton Zürich
+beschreibung: Kantonsrat, Regierungsrat, Gerichte und Bezirke des Kantons Zürich, und wie die Stadt Zürich organisiert ist.
+thema: politik
+kanton: ZH
+reihenfolge: 50
+geprueft_am: 2026-10-19
+entwurf: true
+quellen:
+  - titel: Verfassung des Kantons Zürich vom 27. Februar 2005 (LS 101)
+    url: https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung.html
+  - titel: Kantonsrat Zürich
+    url: https://www.kantonsrat.zh.ch/
+  - titel: Gemeinderat der Stadt Zürich
+    url: https://www.gemeinderat-zuerich.ch/
+  - titel: BFS, Amtliches Gemeindeverzeichnis der Schweiz
+    url: https://www.agvchapp.bfs.admin.ch/de/state/query
+---
+import Zahlen from '../../../components/viz/Zahlen.astro';
+import { gemeindenVon } from '../../../lib/kantone';
+
+<Zahlen zahlen={[
+  { wert: '180', label: 'Kantonsrat', hinweis: 'Parlament' },
+  { wert: '7', label: 'Regierungsrat', hinweis: 'Regierung' },
+  { wert: '12', label: 'Bezirke' },
+  { wert: String(gemeindenVon('ZH').length), label: 'Gemeinden', hinweis: 'Stand 1. Januar 2026' },
+]} />
+
+Der Kanton Zürich hat wie jeder Kanton eine eigene Verfassung. Die heutige **Kantonsverfassung** stammt vom 27. Februar 2005.
+
+## Die Behörden des Kantons
+
+| Gewalt | Behörde | Wahl |
+|---|---|---|
+| Gesetzgebung | **Kantonsrat**, 180 Mitglieder | vom Volk, alle 4 Jahre, nach Proporz |
+| Regierung | **Regierungsrat**, 7 Mitglieder | vom Volk, alle 4 Jahre |
+| Rechtsprechung | **Obergericht**, Bezirksgerichte und weitere Gerichte | Oberrichter vom Kantonsrat |
+
+Anders als beim Bund wählt im Kanton das **Volk die Regierung** direkt.
+
+Das Volk kann auch im Kanton Initiativen einreichen und das Referendum gegen Gesetze ergreifen. Änderungen der Kantonsverfassung kommen automatisch zur Abstimmung.
+
+## Im Bund
+
+Der Kanton Zürich wählt **36 Mitglieder** in den Nationalrat, mehr als jeder andere Kanton, und **2** in den Ständerat.
+
+## Bezirke und Gemeinden
+
+Der Kanton ist in **12 Bezirke** eingeteilt. Die Bezirke sind Verwaltungs- und Gerichtskreise, sie haben kein eigenes Parlament. Die politischen Entscheide fallen in den Gemeinden: In den meisten Gemeinden ist das die **Gemeindeversammlung**, in grösseren Gemeinden und Städten ein gewähltes **Gemeindeparlament**.
+
+## Die Stadt Zürich
+
+| Behörde | Mitglieder |
+|---|---|
+| **Gemeinderat** (Parlament) | 125 |
+| **Stadtrat** (Regierung), geleitet vom Stadtpräsidium | 9 |
+
+In der Stadt Zürich heisst das Parlament «Gemeinderat» und die Regierung «Stadtrat». In kleineren Gemeinden heisst die Regierung «Gemeinderat». Das ist eine typische Prüfungsfrage.

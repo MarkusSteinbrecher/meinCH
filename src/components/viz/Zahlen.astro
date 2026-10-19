@@ -1,0 +1,14 @@
+---
+/** A row of key figures: big number, short label. For «what to remember» at a glance. */
+interface Props { zahlen: { wert: string; label: string; hinweis?: string }[] }
+const { zahlen } = Astro.props;
+---
+<dl class="zahlen">
+  {zahlen.map((z) => (
+    <div class="zahlen__eintrag">
+      <dt>{z.label}</dt>
+      <dd class="zahlen__wert">{z.wert}</dd>
+      {z.hinweis && <dd class="zahlen__hinweis">{z.hinweis}</dd>}
+    </div>
+  ))}
+</dl>
