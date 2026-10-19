@@ -1,5 +1,5 @@
 // Fetches the official municipality list (BFS Amtliches Gemeindeverzeichnis) for a date
-// and writes src/data/gemeinden.json: [{ bfs, name, kanton }]. Run: node tools/gemeinden.mjs [TT-MM-JJJJ]
+// and writes src/data/gemeinden.json: [{ bfs, name, kanton, bezirk }]. Run: node tools/gemeinden.mjs [TT-MM-JJJJ]
 import { writeFileSync } from 'node:fs';
 
 const heute = new Date();
@@ -19,13 +19,19 @@ const kantonVon = (z) => {
   return z?.ShortName;
 };
 
+// District (Bezirk, Verwaltungskreis, arrondissement …): the level-2 parent, by its short name.
+// Cantons without districts have one level-2 entry named after the canton.
+const bezirkVon = (z) => nachCode.get(`2:${z.Parent}`)?.ShortName;
+
 const gemeinden = zeilenObj
   .filter((z) => z.Level === '3')
-  .map((z) => ({ bfs: Number(z.BfsCode), name: z.Name, kanton: kantonVon(z) }))
+  .map((z) => ({ bfs: Number(z.BfsCode), name: z.Name, kanton: kantonVon(z), bezirk: bezirkVon(z) }))
   .sort((a, b) => a.bfs - b.bfs);
 
 const ohneKanton = gemeinden.filter((g) => !g.kanton);
 if (ohneKanton.length) throw new Error(`Ohne Kanton: ${ohneKanton.map((g) => g.name).join(', ')}`);
+const ohneBezirk = gemeinden.filter((g) => !g.bezirk);
+if (ohneBezirk.length) throw new Error(`Ohne Bezirk: ${ohneBezirk.map((g) => g.name).join(', ')}`);
 
 writeFileSync(new URL('../src/data/gemeinden.json', import.meta.url), JSON.stringify({ stichtag, quelle: url, gemeinden }, null, 1) + '\n');
 console.log(`${gemeinden.length} Gemeinden, Stichtag ${stichtag}`);

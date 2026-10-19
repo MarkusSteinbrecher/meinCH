@@ -48,3 +48,11 @@
   - Quiz header shifts the map when its feedback wraps.
   - Yearly data refresh: municipalities (`tools/gemeinden.mjs`), `swiss-maps` year, politics after by-elections and the 24.10.2027 elections.
   - Launch: switch off `ENTWURFSPHASE` when ready; iOS app in its own repo later.
+
+## 2026-10-19 (canton module Bern, #1)
+
+- **Done:** two Bern lessons, listed on the canton page: «Politik im Kanton Bern» (Grosser Rat 160, Regierungsrat 7, courts, Sonderstatut Berner Jura with the 12 guaranteed seats and the reserved government seat, Volksrechte incl. Volksvorschlag, «Bundesstadt», Stadt Bern: Stadtrat 80 / Gemeinderat 5) and «Einbürgerung im Kanton Bern» (2 years in the municipality, KV Art. 7 exclusions, 10 years without social assistance, language of the Verwaltungskreis, test 90 min / 60 %, Stadt Bern 48 questions, fees canton 1150/1725/575, steps with statutory deadlines, 3004 naturalisations in 2025). Every fact from statute texts (BELEX, fedlex) or official pages, read by two research agents.
+- **New for all cantons:** `gemeinden.json` now has `bezirk` (BFS level 2: Bezirk, Verwaltungskreis …); `bezirkKarte()` in `src/lib/karte.ts` and `viz/Bezirke.astro` draw a canton's districts as a numbered map with optional accent highlight. Use it in the other canton modules.
+- **Verified:** build (38 pages); both lessons in the browser at desktop and 375 px, no horizontal scroll.
+- **Notes:** Moutier moved to JU on 1.1.2026 (already in the BFS data). bern.ch answers 403 to curl, the agent read it in a browser. Test price in Bern is not published. Unconfirmed: a news report that the Stadt Bern will drop its naturalisation fees.
+- **Open:** issues #2–#25; Bern lesson on the Grosser Rat Wahlkreise as a visual would need Wahlkreis data (they differ from the Verwaltungskreise).

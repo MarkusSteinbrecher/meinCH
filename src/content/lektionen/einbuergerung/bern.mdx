@@ -1,0 +1,97 @@
+---
+titel: Einbürgerung im Kanton Bern
+beschreibung: Voraussetzungen von Bund und Kanton, der Berner Einbürgerungstest, Gebühren und Ablauf des Verfahrens.
+thema: einbuergerung
+kanton: BE
+reihenfolge: 20
+geprueft_am: 2026-10-19
+quellen:
+  - titel: Bundesgesetz über das Schweizer Bürgerrecht (BüG, SR 141.0)
+    url: https://www.fedlex.admin.ch/eli/cc/2016/404/de
+    artikel: Art. 9, 11, 12, 14, 18
+  - titel: Verordnung über das Schweizer Bürgerrecht (BüV, SR 141.01)
+    url: https://www.fedlex.admin.ch/eli/cc/2016/405/de
+    artikel: Art. 6, 23, 25
+  - titel: Verfassung des Kantons Bern (BSG 101.1)
+    url: https://www.belex.sites.be.ch/app/de/texts_of_law/101.1
+    artikel: Art. 7
+  - titel: Gesetz über das Kantons- und Gemeindebürgerrecht (KBüG, BSG 121.1)
+    url: https://www.belex.sites.be.ch/app/de/texts_of_law/121.1
+    artikel: Art. 11–17, 22, 28
+  - titel: Verordnung über das Kantons- und Gemeindebürgerrecht (KBüV, BSG 121.111)
+    url: https://www.belex.sites.be.ch/app/de/texts_of_law/121.111
+    artikel: Art. 7–14, 21, 27
+  - titel: Verordnung über die Gebühren der Kantonsverwaltung (GebV, BSG 154.21)
+    url: https://www.belex.sites.be.ch/app/de/texts_of_law/154.21
+    artikel: Anhang 5A, Ziff. 3.1.1
+  - titel: Kanton Bern, Einbürgerung (Sicherheitsdirektion)
+    url: https://www.einbuergerung.sid.be.ch/de/start/einbuergerung/ordentliche-einbuergerung/einbuergerungstest.html
+  - titel: Kanton Bern, Einbürgerungsstatistik 2021–2025
+    url: https://www.einbuergerung.sid.be.ch/de/start/ueber-uns/statistik.html
+  - titel: Stadt Bern, Ordentliche Einbürgerung
+    url: https://www.bern.ch/themen/auslanderinnen-und-auslander/einburgerung/ordentliche-einbuergerung
+---
+import Zahlen from '../../../components/viz/Zahlen.astro';
+import Ablauf from '../../../components/viz/Ablauf.astro';
+import { pfad } from '../../../lib/site';
+
+<Zahlen zahlen={[
+  { wert: '2 J.', label: 'Wohnsitz in der Gemeinde' },
+  { wert: '10 J.', label: 'ohne Sozialhilfe', hinweis: 'oder ganz zurückbezahlt' },
+  { wert: '60 %', label: 'zum Bestehen des Tests' },
+  { wert: '3004', label: 'Einbürgerungen 2025', hinweis: 'ordentliche, Kanton Bern' },
+]} />
+
+Wer sich einbürgern lässt, wird gleichzeitig Bürgerin oder Bürger einer **Gemeinde**, eines **Kantons** und der **Schweiz**. Für die Voraussetzungen des Bundes (Niederlassungsbewilligung C, 10 Jahre Aufenthalt, Integration) siehe <a href={pfad('einbuergerung/zuerich')}>Einbürgerung im Kanton Zürich</a>. Sie gelten in allen Kantonen gleich. Hier steht, was im Kanton Bern dazukommt.
+
+## Wohnsitz
+
+Die Kantone legen eine Mindestwohndauer von 2 bis 5 Jahren fest (Art. 18 BüG). Im Kanton Bern musst du beim Gesuch seit mindestens **2 Jahren ununterbrochen in der Einbürgerungsgemeinde** wohnen (Art. 11 KBüG). Ziehst du weg, bevor die Gemeinde das Bürgerrecht zugesichert hat, fällt das Gesuch dahin.
+
+## Was die Berner Verfassung verlangt
+
+Seit einer Volksinitiative von 2013 steht in der Kantonsverfassung, wer **nicht eingebürgert** wird (Art. 7 KV), unter anderem:
+
+- wer wegen eines **Verbrechens** rechtskräftig verurteilt ist oder eine Freiheitsstrafe von mindestens 2 Jahren erhalten hat;
+- wer **Sozialhilfe** bezieht oder bezogene Sozialhilfe nicht vollständig zurückbezahlt hat;
+- wer keine **Niederlassungsbewilligung C** hat oder eine Amtssprache nicht gut genug spricht.
+
+Das Gesetz präzisiert die Sozialhilfe: keine Sozialhilfe in den **10 Jahren vor dem Gesuch** und während des Verfahrens, ausser sie ist ganz zurückbezahlt (Art. 12 KBüG). Ausserdem dürfen in den letzten 5 Jahren keine Verlustscheine oder Betreibungen vorliegen, und Steuerschulden müssen bezahlt sein oder mit einem Zahlungsplan abgezahlt werden (Art. 14 KBüV). Einen Anspruch auf Einbürgerung gibt es nicht.
+
+## Sprache
+
+Verlangt sind **B1 mündlich und A2 schriftlich** in der **Amtssprache des Verwaltungskreises**, zu dem die Gemeinde gehört (Art. 12 KBüG, Art. 12 KBüV): Deutsch, im Berner Jura Französisch. Gemeinden können auch die andere Amtssprache zulassen, die Stadt Bern zum Beispiel akzeptiert Deutsch und Französisch. Den Nachweis bringst du mit einem vom SEM anerkannten Sprachzertifikat, etwa dem fide-Test. Keinen Nachweis brauchst du, wenn die Sprache deine Muttersprache ist oder du mindestens 5 Jahre obligatorische Schule oder eine Ausbildung auf Sekundarstufe II oder höher in dieser Sprache gemacht hast.
+
+## Der Einbürgerungstest im Kanton Bern
+
+Den Test legst du **vor dem Gesuch** ab (Art. 7 KBüV).
+
+- **Schriftlich**, in der Amtssprache, **90 Minuten**, bestanden ab **60 % richtigen Antworten** (Art. 7 Abs. 3 KBüV).
+- Gefragt wird nach Geografie, Geschichte, Sprachen, Religionen und Feiertagen der Schweiz und des Kantons Bern, nach Politik, Demokratie, Föderalismus, Rechten und Pflichten und nach Sozialversicherungen, Gesundheit, Arbeit und Bildung.
+- Durchgeführt wird er von den **Gemeinden**, mindestens dreimal im Jahr, oft über Sprachschulen. Die Stadt Bern anerkennt nur Tests ihrer drei Vertragsschulen, dort hat der Test **48 Fragen** (Multiple Choice oder Zuordnen). Die Kosten trägst du, den Preis legt die Schule fest.
+- Einen eigenen Fragenkatalog veröffentlicht der Kanton nicht. Er verweist auf «Der Bund kurz erklärt» der Bundeskanzlei, die Broschüre «ECHO» des HEKS, das Buch «Die Schweiz verstehen» und auf Übungstests.
+- **Befreit** sind Kinder unter 16 und alle, die mindestens 5 Jahre obligatorische Schule nach Schweizer Lehrplan besucht oder eine Ausbildung auf Sekundarstufe II nach Schweizer Lehrplan oder eine Tertiärausbildung in der Schweiz abgeschlossen haben.
+
+Bestanden heisst noch nicht eingebürgert: Gemeinde und Kanton beurteilen zusätzlich, ob du mit den Lebensverhältnissen vertraut bist, unter anderem im Einbürgerungsgespräch.
+
+## Ablauf
+
+<Ablauf titel="Ordentliche Einbürgerung im Kanton Bern" schritte={[
+  { titel: 'Test und Sprache', text: 'Einbürgerungstest bestehen, Sprachnachweis besorgen.' },
+  { titel: 'Gesuch', text: 'Bei der Wohngemeinde einreichen.' },
+  { zahl: '12 Mt.', titel: 'Gemeinde', text: 'Abklärungen, Einbürgerungsgespräch, Zusicherung durch den Gemeinderat.' },
+  { zahl: '8 Mt.', titel: 'Bund', text: 'Das SEM erteilt die eidgenössische Einbürgerungsbewilligung.' },
+  { titel: 'Kanton', text: 'Die Sicherheitsdirektion erteilt das Kantonsbürgerrecht. Erst jetzt bist du eingebürgert.' },
+]} />
+
+Die Monate sind Richtwerte aus den Verordnungen (Art. 21 KBüV, Art. 23 BüV). Insgesamt rechnet die Stadt Bern mit **etwa 2 Jahren** ab vollständigem Gesuch.
+
+## Gebühren
+
+| Wer | Einzelperson | Ehepaar | Minderjährige allein |
+|---|---|---|---|
+| Kanton Bern | CHF 1150 | CHF 1725 | CHF 575 |
+| Gemeinde, Beispiel Stadt Bern | CHF 400 | CHF 600 | CHF 200 |
+| Bund | CHF 100 | CHF 150 | CHF 50 |
+
+Minderjährige Kinder, die im Gesuch der Eltern eingeschlossen sind, zahlen nichts. Die kantonale Gebühr ist auch bei einer Abweisung geschuldet. Dazu kommen die Kosten für Test und Sprachnachweis.

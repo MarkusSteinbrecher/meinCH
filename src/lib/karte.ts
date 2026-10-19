@@ -1,5 +1,5 @@
 import { geoMercator, geoPath, type GeoPermissibleObjects } from 'd3-geo';
-import { feature, mesh } from 'topojson-client';
+import { feature, merge, mesh } from 'topojson-client';
 import type { Topology, GeometryCollection } from 'topojson-specification';
 import topo from 'swiss-maps/2026/ch-combined.json';
 import { KANTONE, GEMEINDEN } from './kantone';
@@ -65,6 +65,31 @@ export function kantonKarte(nr: number, breite = 640): Karte {
     flaechen: feature(t, gemeinden).features.map((f) => ({ id: Number(f.id), code, name: namen.get(Number(f.id))!, d: runden(pfad(f)) })),
     seen: runden(pfad(seenAlle)),
     grenzen: runden(pfad(mesh(t, gemeinden))),
+    umriss: runden(pfad(kanton)),
+  };
+}
+
+export type Bezirk = { name: string; d: string; x: number; y: number };
+export type BezirkKarte = { breite: number; hoehe: number; bezirke: Bezirk[]; seen: string; umriss: string };
+
+/** One canton divided into its BFS districts (merged municipalities), with a label point per district. */
+export function bezirkKarte(code: string, breite = 640): BezirkKarte {
+  const nr = KANTONE.findIndex((k) => k.code === code) + 1;
+  const kanton = feature(t, t.objects.cantons).features.find((f) => Number(f.id) === nr);
+  if (!kanton) throw new Error(`Kanton ${code} nicht in den Kartendaten`);
+  const bezirkVon = new Map(GEMEINDEN.filter((g) => g.kanton === code).map((g) => [g.bfs, g.bezirk]));
+  const { projektion: p, hoehe } = projektion(kanton, breite);
+  const pfad = geoPath(p);
+  const namen = [...new Set(bezirkVon.values())];
+  return {
+    breite,
+    hoehe,
+    bezirke: namen.map((name) => {
+      const flaeche = merge(t, t.objects.municipalities.geometries.filter((g) => bezirkVon.get(Number(g.id)) === name) as never);
+      const [x, y] = pfad.centroid(flaeche);
+      return { name, d: runden(pfad(flaeche)), x: Math.round(x), y: Math.round(y) };
+    }),
+    seen: runden(pfad(seenAlle)),
     umriss: runden(pfad(kanton)),
   };
 }

@@ -1,0 +1,97 @@
+---
+titel: Politik im Kanton Bern
+beschreibung: Grosser Rat, Regierungsrat, Gerichte und Verwaltungskreise des Kantons Bern, das Sonderstatut des Berner Juras und wie die Stadt Bern organisiert ist.
+thema: politik
+kanton: BE
+reihenfolge: 51
+geprueft_am: 2026-10-19
+quellen:
+  - titel: Verfassung des Kantons Bern vom 6. Juni 1993 (BSG 101.1)
+    url: https://www.belex.sites.be.ch/app/de/texts_of_law/101.1
+    artikel: Art. 5, 6, 56–63, 72, 73, 84, 85, 93
+  - titel: Gesetz über die politischen Rechte (PRG, BSG 141.1)
+    url: https://www.belex.sites.be.ch/app/de/texts_of_law/141.1
+    artikel: Art. 63, 64, 107
+  - titel: Sonderstatutsgesetz (SStG, BSG 102.1)
+    url: https://www.belex.sites.be.ch/app/de/texts_of_law/102.1
+    artikel: Art. 2, 3, 34
+  - titel: Organisationsgesetz (OrG, BSG 152.01)
+    url: https://www.belex.sites.be.ch/app/de/texts_of_law/152.01
+    artikel: Art. 39a
+  - titel: Gerichtsorganisationsgesetz (GSOG, BSG 161.1)
+    url: https://www.belex.sites.be.ch/app/de/texts_of_law/161.1
+    artikel: Art. 2, 80, 81
+  - titel: Gemeindegesetz (GG, BSG 170.11)
+    url: https://www.belex.sites.be.ch/app/de/texts_of_law/170.11
+    artikel: Art. 12, 24
+  - titel: Gemeindeordnung der Stadt Bern (SSSB 101.1)
+    url: https://stadtrecht.bern.ch/lexoverview-home/lex-101_1
+    artikel: Art. 20, 41, 87, 117
+  - titel: Bundesgesetz über die Regierungs- und Verwaltungsorganisation (RVOG, SR 172.010)
+    url: https://www.fedlex.admin.ch/eli/cc/1997/2022_2022_2022/de
+    artikel: Art. 58
+  - titel: BFS, Amtliches Gemeindeverzeichnis der Schweiz
+    url: https://www.agvchapp.bfs.admin.ch/de/state/query
+---
+import Zahlen from '../../../components/viz/Zahlen.astro';
+import Bezirke from '../../../components/viz/Bezirke.astro';
+import { gemeindenVon } from '../../../lib/kantone';
+
+<Zahlen zahlen={[
+  { wert: '160', label: 'Grosser Rat', hinweis: 'Parlament' },
+  { wert: '7', label: 'Regierungsrat', hinweis: 'Regierung' },
+  { wert: '10', label: 'Verwaltungskreise' },
+  { wert: String(gemeindenVon('BE').length), label: 'Gemeinden', hinweis: 'Stand 1. Januar 2026' },
+]} />
+
+Der Kanton Bern hat zwei Amtssprachen: **Deutsch** und **Französisch** (Art. 6 KV). Die heutige **Kantonsverfassung** stammt vom 6. Juni 1993 und gilt seit dem 1. Januar 1995.
+
+## Die Behörden des Kantons
+
+| Gewalt | Behörde | Wahl |
+|---|---|---|
+| Gesetzgebung | **Grosser Rat**, 160 Mitglieder | vom Volk, alle 4 Jahre, nach Proporz, in 9 Wahlkreisen |
+| Regierung | **Regierungsrat**, 7 Mitglieder | vom Volk, alle 4 Jahre, nach Majorz, der ganze Kanton ist ein Wahlkreis |
+| Rechtsprechung | **Obergericht** und **Verwaltungsgericht**, 4 Regionalgerichte und weitere Gerichte | |
+
+Wie in allen Kantonen wählt das **Volk die Regierung** direkt. Das Parlament heisst in Bern «Grosser Rat», nicht «Kantonsrat» wie in Zürich.
+
+## Der Berner Jura
+
+Der französischsprachige **Berner Jura** hat ein **Sonderstatut** (Art. 5 KV): Er soll seine Identität und seine Sprache bewahren und aktiv an der Kantonspolitik teilnehmen können. Das zeigt sich so:
+
+- Im Grossen Rat hat der Wahlkreis Berner Jura **12 Sitze garantiert**. Auch die Französischsprachigen im Wahlkreis Biel-Seeland müssen angemessen vertreten sein (Art. 73 KV).
+- Ein Sitz im Regierungsrat ist für den **Berner Jura reserviert**. Wählbar ist nur, wer französischsprachig ist und im Berner Jura wohnt. Gewählt wird trotzdem im ganzen Kanton, die Stimmen aus dem Berner Jura zählen aber besonders (Art. 84 und 85 KV).
+- Der **Bernjurassische Rat** mit 24 Mitgliedern vertritt die Region gegenüber dem Kanton (SStG).
+
+Seit dem **1. Januar 2026** gehört die Stadt **Moutier** nicht mehr zum Kanton Bern, sondern zum Kanton Jura.
+
+<Bezirke kanton="BE" hervorheben={['Jura bernois']} legende="Berner Jura: Amtssprache Französisch, Sonderstatut" titel="Die 10 Verwaltungskreise des Kantons Bern, Stand 1. Januar 2026" />
+
+## Verwaltungskreise und Regionen
+
+Der Kanton ist in **5 Verwaltungsregionen** und **10 Verwaltungskreise** eingeteilt (Art. 39a OrG). Jeder Verwaltungskreis wählt eine **Regierungsstatthalterin** oder einen Regierungsstatthalter, die den Kanton dort vertreten (Art. 93 KV). Die 9 Wahlkreise für den Grossen Rat sind nicht genau dieselben wie die Verwaltungskreise: Die Stadt Bern ist zum Beispiel ein eigener Wahlkreis.
+
+## Volksrechte
+
+- **Volksinitiative:** 15 000 Unterschriften in 6 Monaten, für eine Totalrevision der Verfassung 30 000 (Art. 58 KV).
+- **Fakultatives Referendum:** 10 000 Unterschriften in 3 Monaten, zum Beispiel gegen Gesetze oder einmalige Ausgaben über CHF 2 Millionen (Art. 62 KV).
+- **Obligatorisches Referendum:** Verfassungsänderungen kommen automatisch zur Abstimmung (Art. 61 KV).
+- **Volksvorschlag:** eine Berner Besonderheit. 10 000 Stimmberechtigte können einem Gesetz des Grossen Rates einen eigenen Gegenvorschlag gegenüberstellen. Dann stimmt das Volk über beide ab (Art. 63 KV).
+
+## Im Bund
+
+Der Kanton Bern wählt **24 Mitglieder** in den Nationalrat, nach Zürich am meisten, und **2** in den Ständerat.
+
+Die Stadt Bern ist Sitz von Bundesrat, Bundesverwaltung und Parlament (Art. 58 RVOG). Die Bundesverfassung nennt aber keine Hauptstadt. Deshalb heisst Bern «**Bundesstadt**», und für den Kanton ist sie die Kantonshauptstadt (Art. 20 Gemeindeordnung der Stadt Bern).
+
+## Gemeinden und die Stadt Bern
+
+Jede Gemeinde entscheidet selbst, ob sie ein **Gemeindeparlament** mit mindestens 30 Mitgliedern hat. Sonst entscheiden die Stimmberechtigten an der **Gemeindeversammlung** (Art. 12 und 24 GG). Die meisten der {gemeindenVon('BE').length} Gemeinden haben eine Gemeindeversammlung.
+
+| Behörde der Stadt Bern | Mitglieder |
+|---|---|
+| **Stadtrat** (Parlament) | 80 |
+| **Gemeinderat** (Regierung), mit dem Stadtpräsidium | 5 |
+
+Wie in der Stadt Zürich ist der Name eine Falle: In Bern heisst das Parlament «Stadtrat» und die Regierung «Gemeinderat», in Zürich ist es genau umgekehrt.

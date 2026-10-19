@@ -153,3 +153,12 @@ td[data-num], th[data-num] { text-align: right; font-variant-numeric: tabular-nu
 .legende__feld { width: var(--space-4); height: var(--space-4); border-radius: var(--radius-sm); background: var(--fill-active); }
 .legende__feld[data-halb] { background: var(--accent-solid); }
 @media (max-width: 700px) { .sd-prose table { display: block; overflow-x: auto; } }
+.bezirke svg { width: 100%; max-width: 640px; height: auto; display: block; }
+.bezirke svg > path:not([class]) { fill: var(--fill-active); stroke: var(--bg-page); stroke-width: 2; stroke-linejoin: round; }
+.bezirke svg > path[data-hervor] { fill: var(--accent-solid); }
+.bezirke__seen { fill: var(--bg-page); }
+.bezirke__nr circle { fill: var(--bg-page); stroke: var(--fg-default); stroke-width: 1; }
+.bezirke__nr text { font: var(--font-caption); font-weight: 600; text-anchor: middle; fill: var(--fg-default); }
+.bezirke__liste { margin: var(--space-3) 0 0; padding-left: var(--space-6); columns: 2 14rem; column-gap: var(--space-6); font: var(--font-caption); }
+.sd-prose .bezirke__liste li { margin: 0 0 var(--space-1); }
+.bezirke__liste li[data-hervor] { font-weight: 600; }

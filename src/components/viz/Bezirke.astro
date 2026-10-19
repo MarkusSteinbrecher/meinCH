@@ -1,0 +1,29 @@
+---
+/**
+ * A canton's districts (BFS level 2: Bezirk, Verwaltungskreis …) as a static map with numbered labels
+ * and a numbered list. One ink colour; districts in `hervorheben` use the accent.
+ */
+import { bezirkKarte } from '../../lib/karte';
+
+interface Props { kanton: string; hervorheben?: string[]; legende?: string; titel: string }
+const { kanton, hervorheben = [], legende, titel } = Astro.props;
+const karte = bezirkKarte(kanton);
+const clipId = `bezirke-${kanton.toLowerCase()}`;
+---
+<figure class="bezirke">
+  <svg viewBox={`0 0 ${karte.breite} ${karte.hoehe}`} role="img" aria-label={titel}>
+    <clipPath id={clipId}><path d={karte.umriss} /></clipPath>
+    {karte.bezirke.map((b, i) => (
+      <path d={b.d} data-hervor={hervorheben.includes(b.name) ? '' : undefined}><title>{i + 1} {b.name}</title></path>
+    ))}
+    <path class="bezirke__seen" d={karte.seen} clip-path={`url(#${clipId})`} />
+    {karte.bezirke.map((b, i) => (
+      <g class="bezirke__nr" transform={`translate(${b.x} ${b.y})`} aria-hidden="true"><circle r="11" /><text dy="0.35em">{i + 1}</text></g>
+    ))}
+  </svg>
+  <ol class="bezirke__liste">
+    {karte.bezirke.map((b) => <li data-hervor={hervorheben.includes(b.name) ? '' : undefined}>{b.name}</li>)}
+  </ol>
+  {legende && <ul class="legende"><li><span class="legende__feld" data-halb></span>{legende}</li></ul>}
+  <figcaption>{titel}</figcaption>
+</figure>

@@ -50,7 +50,8 @@ export function kantonVon(code: string): Kanton {
   return k;
 }
 
-export type Gemeinde = { bfs: number; name: string; kanton: string };
+/** `bezirk`: BFS district short name (Bezirk, Verwaltungskreis, arrondissement …). */
+export type Gemeinde = { bfs: number; name: string; kanton: string; bezirk: string };
 export const GEMEINDEN: Gemeinde[] = gemeindeDatei.gemeinden;
 export const GEMEINDEN_STICHTAG = gemeindeDatei.stichtag;
 export const GEMEINDEN_QUELLE = gemeindeDatei.quelle;
