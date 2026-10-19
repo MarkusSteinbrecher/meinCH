@@ -35,3 +35,16 @@
 - **Done:** every fact on the site checked against official sources (four parallel checks: canton data, politics figures, federal lessons, Zurich lessons). All `ungeprueft` flags removed.
 - **Corrected:** AR has no constitutional Hauptort (courts, not only the cantonal court, in Trogen); JU dates 24.9.1978 / 1.1.1979; municipalities have no courts (state-levels grid, key figures); Art. 148 quote completed; Bundesgericht seat from BGG Art. 4 (Lausanne, two divisions in Luzern); Fraktion = same or like-minded parties, ≥ 5 members (ParlG Art. 61); General elected for large active-service deployments, not only war; next elections 24.10.2027; casting vote of the president (RVOG Art. 19); Art. 140/141 scope completed; Ständemehr = majority of Standesstimmen (≥ 12 of 23); Council of States chart labelled as 2023 result (seats changed since, e.g. SH 2025); VBS «Bevölkerungsschutz». Zurich naturalisation: «Lina» is fictional; 3 of the last 5 years (Art. 9); integration vs familiarity separated; German required in ZH; residence 2 years in the municipality (under 25: in the canton); «50 of 350» attributed to the Maur leaflet, pass mark not published; extra exemption; fees table added. Zurich politics: KV in force 1.1.2006, Majorz for Regierungsrat, court elections, cantonal initiative/referendum thresholds, 12 districts named (checked against BFS data), only some municipalities have a parliament. Sources replaced: BüV on fedlex, KV on zhlex, NR seats on ch.ch; new: BGG, ParlG, RVOG, ar.ch, zh.ch fees page, Maur leaflet.
 - **Limits:** HLS blocked direct fetches (canton history facts rest on search excerpts plus BV); Ständerat 2026 composition (FDP 12, SP 7, one non-party) from parlament.ch via the checker, not shown on the site.
+
+## 2026-10-19 (wrap-up)
+
+- **Done:** 25 GitHub issues, one per canton except Zurich (#1–#25, label `kanton`), each with a checklist for a canton module like Zurich (politics + naturalisation) and research hints where known (BE, AG, SZ, SG, BL, NW, TG, BS).
+- **State of the site** (https://stein-clankers.github.io/meinCH/, noindex draft): home with Switzerland map and canton quiz; 26 canton pages with municipality maps, quiz and lists; politics section with 5 lessons and visuals (key figures, state levels, NR seats per canton, party bars, Federal Council tiles, process steps, Ständemehr map); naturalisation lesson for Zurich; `/daten/kantone.json` export (cantons, municipalities, politics). All facts checked against official sources on 2026-10-19.
+- **Open (next sessions):**
+  - Canton modules: issues #1–#25.
+  - History and geography lessons in the same visual style.
+  - Question trainer with own questions (no verbatim official catalogues).
+  - Stadt Zürich lesson; naturalisation step by step for Zurich; which municipality Markus lives in (assumed Stadt Zürich, not confirmed).
+  - Quiz header shifts the map when its feedback wraps.
+  - Yearly data refresh: municipalities (`tools/gemeinden.mjs`), `swiss-maps` year, politics after by-elections and the 24.10.2027 elections.
+  - Launch: switch off `ENTWURFSPHASE` when ready; iOS app in its own repo later.
