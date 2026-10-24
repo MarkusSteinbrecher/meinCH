@@ -1,0 +1,92 @@
+---
+titel: Politik im Kanton Obwalden
+beschreibung: Kantonsrat, Regierungsrat und Gerichte des Kantons Obwalden, die Volksrechte mit sehr tiefen Unterschriftenzahlen, das Ende der Landsgemeinde 1998 und die sieben Gemeinden.
+thema: politik
+kanton: OW
+reihenfolge: 55
+geprueft_am: 2026-10-24
+quellen:
+  - titel: Verfassung des Kantons Obwalden vom 19. Mai 1968 (GDB 101.0)
+    url: https://gdb.ow.ch/app/de/texts_of_law/101.0
+    artikel: Art. 2, 48, 49, 52, 57–61, 66, 69, 74, 79–81, 85, 90–98, 100, 107, 114
+  - titel: Kantonsverfassung (Ersetzung der Landsgemeindedemokratie durch die Urnendemokratie), Nachtrag vom 29. November 1998 (OGS 1999, 49)
+    url: https://gdb.ow.ch/api/de/change_documents/file_dictionaries/234/pdf_file
+  - titel: Gesetz über die Ausübung der politischen Rechte (Abstimmungsgesetz, GDB 122.1)
+    url: https://gdb.ow.ch/app/de/texts_of_law/122.1
+    artikel: Art. 35
+  - titel: Gesetz über die Gerichtsorganisation (GOG, GDB 134.1)
+    url: https://gdb.ow.ch/app/de/texts_of_law/134.1
+    artikel: Art. 1, 1a
+  - titel: Gemeindeordnung der Gemeinde Sarnen vom 2. Juni 2002 (Stand 6. November 2018)
+    url: https://www.sarnen.ch/_docn/2294561/Gemeindeordnung_v._06.11.18_Inkraft_seit_01.05.19pdf.pdf
+    artikel: Art. 10 Abs. 2
+  - titel: Bundesverfassung der Schweizerischen Eidgenossenschaft (BV, SR 101)
+    url: https://www.fedlex.admin.ch/eli/cc/1999/404/de
+    artikel: Art. 1, 142 Abs. 4, 149, 150
+  - titel: BFS, Amtliches Gemeindeverzeichnis der Schweiz
+    url: https://www.agvchapp.bfs.admin.ch/de/state/query
+---
+import Zahlen from '../../../components/viz/Zahlen.astro';
+import { gemeindenVon } from '../../../lib/kantone';
+
+<Zahlen zahlen={[
+  { wert: '55', label: 'Kantonsrat', hinweis: 'Parlament' },
+  { wert: '5', label: 'Regierungsrat', hinweis: 'Regierung' },
+  { wert: String(gemeindenVon('OW').length), label: 'Gemeinden', hinweis: 'Stand 1. Januar 2026' },
+  { wert: '1', label: 'Sitz im Ständerat', hinweis: 'und 1 im Nationalrat' },
+]} />
+
+Obwalden gehört seit **1291** zur Eidgenossenschaft. Amtssprache ist **Deutsch**. Die **Kantonsverfassung** stammt vom 19. Mai 1968 und gilt seit dem 27. April 1969. Seither ist sie oft geändert, aber nie ganz ersetzt worden.
+
+## Die Behörden des Kantons
+
+| Gewalt | Behörde | Wahl |
+|---|---|---|
+| Gesetzgebung | **Kantonsrat**, 55 Mitglieder | vom Volk, alle 4 Jahre, nach Proporz. Die Sitze werden nach Einwohnerzahl auf die Gemeinden verteilt, jede Gemeinde hat mindestens 4 |
+| Regierung | **Regierungsrat**, 5 Mitglieder | vom Volk, alle 4 Jahre, nach Majorz |
+| Rechtsprechung | **Obergericht** (mit der Abteilung Verwaltungsgericht) und **Kantonsgericht** | Präsidien und Mitglieder vom Volk an der Urne |
+
+- Der Kantonsrat wählt jedes Jahr aus dem Regierungsrat den **Landammann**, der die Regierung präsidiert, und den Landstatthalter. Wer Landammann war, kann es im folgenden Jahr nicht noch einmal werden, und insgesamt höchstens viermal (Art. 69 KV).
+- Seit dem 1. Juli 2002 hat der Regierungsrat **5 statt 7 Mitglieder** (Verfassungsnachtrag vom 2. Dezember 2001).
+- Für Kantonsrätinnen, Richter und Gemeinderätinnen gilt eine **Amtszeitbeschränkung von 16 Jahren** (Art. 49 KV), für den Regierungsrat nicht.
+- Das Amtsjahr beginnt am **1. Juli**.
+- Ungewöhnlich ist, dass das Volk auch die **Richterinnen und Richter** an der Urne wählt (Art. 57 KV). Das **Kantonsgericht** urteilt in erster Instanz. Das **Obergericht** ist die oberste Instanz und zugleich Verwaltungsgericht (Art. 1 GOG).
+
+## Von der Landsgemeinde zur Urne
+
+Obwalden hatte bis 1998 eine **Landsgemeinde**: Die Stimmberechtigten versammelten sich unter freiem Himmel und entschieden mit Handerheben. Am **29. November 1998** hat das Volk beschlossen, sie durch die **Urnenabstimmung** zu ersetzen. Seither wählt und stimmt das Volk an der Urne (Art. 57 und 58 KV). Gemeindeversammlungen gibt es weiterhin.
+
+## Volksrechte
+
+In kaum einem Kanton braucht es so wenige Unterschriften:
+
+<Zahlen zahlen={[
+  { wert: '500', label: 'Unterschriften für eine Initiative', hinweis: 'Verfassung, Gesetz oder Standesinitiative' },
+  { wert: '100', label: 'Unterschriften für ein Referendum', hinweis: 'innert 30 Tagen' },
+  { wert: '1', label: 'Person für eine Volksmotion', hinweis: 'wenn der Kantonsrat sie unterstützt' },
+]} />
+
+- **Volksbegehren (Initiative):** 500 Stimmberechtigte können eine Änderung der Verfassung, ein neues oder geändertes Gesetz oder eine Standesinitiative an die Bundesversammlung verlangen (Art. 61 KV).
+- **Fakultatives Referendum:** 100 Stimmberechtigte innert 30 Tagen, oder ein Drittel des Kantonsrates. Möglich gegen Gesetze und gegen einmalige Ausgaben über CHF 1 Million oder wiederkehrende über CHF 200 000 pro Jahr (Art. 59 KV).
+- **Obligatorisches Referendum:** Verfassungsänderungen kommen immer an die Urne, ebenso Volksbegehren, denen der Kantonsrat nicht zustimmt (Art. 58 KV).
+- **Volksmotion:** eine Obwaldner Besonderheit. Schon eine einzelne stimmberechtigte Person oder ein Gemeinderat kann ein Gesetz verlangen. Unterstützt der Kantonsrat das Begehren, muss er es umsetzen (Art. 61 Abs. 2 KV).
+
+## Im Bund
+
+Obwalden wählt **1 Mitglied** in den Nationalrat und **1** in den Ständerat. Die Bundesverfassung zählt Obwalden, zusammen mit Nidwalden, Basel-Stadt, Basel-Landschaft und den beiden Appenzell, zu den Kantonen mit **halber Standesstimme**: Beim Ständemehr zählt Obwalden halb, und es hat nur einen Sitz im Ständerat statt zwei (Art. 142 Abs. 4 und 150 Abs. 2 BV). Im Verfassungstext selbst kommt das Wort «Halbkanton» nicht vor.
+
+## Die sieben Gemeinden
+
+Die Verfassung zählt alle Gemeinden einzeln auf: **Sarnen**, Kerns, Sachseln, Alpnach, Giswil, Lungern und **Engelberg** (Art. 2 KV). Bezirke gibt es keine. **Sarnen** ist Hauptort und Sitz von Regierung, Parlament und Gerichten.
+
+In allen Gemeinden entscheiden die Stimmberechtigten an der **Gemeindeversammlung**, ein Gemeindeparlament hat keine. Die Versammlung wählt den Gemeinderat mit 5 bis 13 Mitgliedern, beschliesst Rechnung, Voranschlag und Steuerfuss (Art. 92 und 93 KV). In Engelberg heisst der Gemeindepräsident «**Talammann**».
+
+Neben der Einwohnergemeinde gibt es in Obwalden weitere Gemeindearten (Art. 90 KV):
+
+| Gemeindeart | Wer gehört dazu |
+|---|---|
+| **Einwohnergemeinde** | alle, die in der Gemeinde wohnen |
+| **Bürgergemeinde** | alle, die dort heimatberechtigt sind, egal wo sie wohnen. Sie entscheidet über die Einbürgerung. Sie kann diese Aufgaben auch der Einwohnergemeinde übertragen, wie in Sarnen |
+| **Kirchgemeinde** | die Mitglieder der katholischen oder reformierten Kirche |
+
+Dazu kommen die **Korporationen** und Teilsamen, alte Genossenschaften, die Wald, Alpen und Allmenden verwalten (Art. 107 KV).
